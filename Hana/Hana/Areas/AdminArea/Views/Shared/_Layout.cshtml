@@ -1,0 +1,251 @@
+﻿@using Hana.Helpers;
+@{
+    int userId = 0;
+    string userName = string.Empty;
+    string userRole = string.Empty;
+    int userRoleId = 3;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trang quản lý</title>
+    <link rel=icon href=~/assets/img/icon.png sizes="20x20" type="image/png">
+    <link href="~/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <!--font awesome-->
+    <link href="~/admin/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/font-awesome/css/brands.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/font-awesome/css/solid.css" rel="stylesheet" type="text/css">
+    @*<link href="~/css/all.css" rel="stylesheet">*@
+
+    <!--data table-->
+    <link href="~/admin/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="~/admin/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/css/plugins/summernote/summernote-bs4.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet" type="text/css">
+    <link href="~/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/css/awesome-bootstrap-checkbox.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/lib/jquery/jquery-3.7.1.slim.min.js"></script>
+
+</head>
+
+
+<body style="">
+    <div id="wrapper">
+        @{
+            if (User.Identity.IsAuthenticated)
+            {
+                userId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "UserId").Value);
+                userName = User.Claims.FirstOrDefault(c => c.Type == "UserName").Value;
+                userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value switch
+                {
+                    "Admin" => "Admin",
+                    "Manager" => "Quản lý",
+                    "Customer" => "Khách hàng",
+                    _ => "Khách hàng"
+                };
+
+                userRoleId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "LevelId").Value);
+            }
+        }
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <div class="mx-auto" style="width: 50px">
+                                <img alt="image" class="img-fluid rounded-circle d-block mx-auto" src="~/admin/img/ami.jpg" />
+                            </div>
+                            <a data-toggle="dropdown" class="dropdown-toggle text-center" href="/#">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span class="block m-t-xs font-bold">@userName</span>
+                                    <span class="text-muted text-xs block">
+                                        @userRole
+                                        <b class="caret"></b>
+                                    </span>
+                                }
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" asp-controller="Agent" asp-action="UpdateProfile">Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item" asp-controller="Agent" asp-action="UpdatePassword">Đổi mật khẩu</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="AdminArea" asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </li>
+
+                    @if (userRoleId < 3)
+                    {
+                        <li class="@Html.IsActiveLink("RealEstate")">
+                            <a href="#"><i class="fas fa-list"></i> <span class="nav-label">Danh sách bài đăng</span><span class="arrow"><i class="fas fa-chevron-down"></i></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li class="@Html.IsActiveLink("RealEstate","Index")">
+                                    <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="Index">Tất cả bài viết</a>
+                                </li>
+                                <li class="@Html.IsActiveLink("RealEstate","ClientRealEstateList")">
+                                    <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="ClientRealEstateList">Bài viết cá nhân</a>
+                                </li>
+                                <li class="@Html.IsActiveLink("RealEstate","CustomerConfirmList")">
+                                    <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="CustomerConfirmList">Chờ xác nhận</a>
+                                </li>
+                                <li class="@Html.IsActiveLink("RealEstate","CustomerExpireList")">
+                                    <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="CustomerExpireList">Bài viết quá hạn</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="@Html.IsActiveLink("RealEstateType", "Index")">
+                            <a asp-area="AdminArea" asp-controller="RealEstateType" asp-action="Index">
+                                <i class="fas fa-building"></i> <span class="nav-label">Quản lý loại hình BĐS</span>
+                            </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("Agent", "Index")">
+                            <a asp-area="AdminArea" asp-controller="Agent" asp-action="Index"><i class="fas fa-users"></i> <span class="nav-label">Quản lý thành viên</span></a>
+                        </li>
+
+                        <li class="@Html.IsActiveLink("FAQ", "Index")">
+                            <a asp-area="AdminArea" asp-controller="FAQ" asp-action="Index">
+                                <i class="fas fa-question-circle"></i> <span class="nav-label">FAQs</span>
+                            </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("Level", "Index")">
+                            <a asp-area="AdminArea" asp-controller="Level" asp-action="Index">
+                                <i class="fas fa-user-secret"></i> <span class="nav-label">Quản lý phân quyền</span>
+                            </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("Policy", "Index")">
+                            <a asp-area="AdminArea" asp-controller="Policy" asp-action="Index">
+                                <i class="fas fa-bahai"></i> <span class="nav-label">Chính sách</span>
+                            </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("AboutUs", "Index")">
+                            <a asp-area="AdminArea" asp-controller="AboutUs" asp-action="Index"><i class="fas fa-info-circle"></i> <span class="nav-label">Thông tin thêm</span></a>
+                        </li>
+                        <li class="@Html.IsActiveLink("Account", "Logout")">
+                            <a asp-area="AdminArea" asp-controller="Account" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> <span class="nav-label">Đăng xuất</span> </a>
+                        </li>
+                    }
+                    else //client
+                    {
+                        <li class="@Html.IsActiveLink("RealEstate", "ClientRealEstateList")">
+                            <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="ClientRealEstateList"><i class="fas fa-list"></i> <span class="nav-label">Quản lý bài đăng</span> </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("RealEstate", "Create")">
+                            <a asp-area="AdminArea" asp-controller="RealEstate" asp-action="Create"><i class="fas fa-feather-alt"></i> <span class="nav-label">Đăng tin</span> </a>
+                        </li>
+                        <li class="@Html.IsActiveLink("Agent")">
+                            <a href="#"><i class="fas fa-user-edit"></i> <span class="nav-label">Tài khoản</span> <span class="arrow"><i class="fas fa-chevron-down"></i></span></a>
+                            <ul class="nav nav-second-level collapse">
+
+                                <li class="@Html.IsActiveLink("Agent", "UpdatePassword")">
+                                    <a asp-area="AdminArea" asp-controller="Agent" asp-action="UpdatePassword">Đổi mật khẩu</a>
+                                </li>
+                                <li class="@Html.IsActiveLink("Agent", "UpdateProfile")">
+                                    <a asp-area="AdminArea" asp-controller="Agent" asp-action="UpdateProfile">Thông tin cá nhân</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="@Html.IsActiveLink("Account", "Logout")">
+                            <a asp-area="AdminArea" asp-controller="Account" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> <span class="nav-label">Đăng xuất</span> </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-yellow " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <span class="m-r-sm text-muted welcome-message">Xin chào, @userName</span>
+                            </li>
+                            <li>
+                                <a asp-area="AdminArea" asp-controller="Account" asp-action="Logout">
+                                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <span class="m-r-sm text-muted welcome-message">
+                                    Xin chào
+                                </span>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+
+            @RenderBody()
+
+        </div>
+
+        <!--modal-->
+        <div class="modal inmodal fade" id="modal-form" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/admin/js/jquery-3.7.1.min.js"></script>
+    <script src="~/admin/js/popper.min.js"></script>
+    <script src="~/admin/js/bootstrap.js"></script>
+    <script src="~/admin/js/modal.js"></script>
+    <script src="~/admin/js/inspinia.js"></script>
+    <script src="~/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="~/admin/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!--datatable-->
+    <script src="~/admin/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="~/admin/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/admin/js/inspinia.js"></script>
+    <script src="~/admin/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="~/admin/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- SUMMERNOTE -->
+    <script src="~/admin/js/plugins/summernote/summernote-bs4.js"></script>
+
+    <!--Sweet alert-->
+    <script src="~/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!--font awsesome-->
+    <script src="~/js/all.js"></script>
+    <script src="~/js/formatHtml.js"></script>
+    <script src="~/admin/js/services/hana.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

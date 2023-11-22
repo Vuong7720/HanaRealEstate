@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Hana.Models.DataModels.AboutUs>;
+
+@{ ViewData["Title"] = "Index";}
+
+<div id="view-all">
+    @await Html.PartialAsync("_viewAllAboutUs", Model)
+</div>
+

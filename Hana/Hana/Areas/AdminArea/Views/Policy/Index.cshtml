@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Hana.Models.DataModels.Policy>;
+
+@{ ViewData["Title"] = "Index";}
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAllPolicies", Model)
+</div>
+
+

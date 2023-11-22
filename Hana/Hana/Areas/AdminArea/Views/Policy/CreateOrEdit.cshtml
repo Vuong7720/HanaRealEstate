@@ -1,0 +1,25 @@
+﻿@model Hana.Models.DataModels.Policy;
+
+@{Layout = null;}
+
+<div class="row">
+    <div class="col-sm-12 b-r">
+        <form asp-action="CreateOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="PolicyContent">Content</label>
+                <textarea type="text" asp-for="PolicyContent" class="form-control"></textarea>
+                <span asp-validation-for="PolicyContent" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input class="btn btn-sm btn-primary float-right m-t-n-xs"
+                       type="submit"
+                       value="Save">
+            </div>
+        </form>
+    </div>
+
+</div>
+

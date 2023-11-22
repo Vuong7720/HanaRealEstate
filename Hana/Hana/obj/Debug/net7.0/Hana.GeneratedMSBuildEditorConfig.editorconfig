@@ -1,0 +1,237 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Hana
+build_property.RootNamespace = Hana
+build_property.ProjectDir = D:\DoAnTotNghiep\Hana\Hana\Hana\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\DoAnTotNghiep\Hana\Hana\Hana
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/AboutUs/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFib3V0VXNcQ3JlYXRlT3JFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/AboutUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFib3V0VXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/AboutUs/_viewAllAboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFib3V0VXNcX3ZpZXdBbGxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Account/Denied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Account/VerifyPhoneNumber.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcVmVyaWZ5UGhvbmVOdW1iZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/UpdatePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XFVwZGF0ZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/UpdateProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XFVwZGF0ZVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/_ViewAllAgents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XF9WaWV3QWxsQWdlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/FAQ/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEZBUVxDcmVhdGVPckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/FAQ/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEZBUVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/FAQ/_viewAllFAQs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEZBUVxfdmlld0FsbEZBUXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Home/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEhvbWVcVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Level/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXExldmVsXENyZWF0ZU9yRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Level/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXExldmVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Level/_ViewAllLevels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXExldmVsXF9WaWV3QWxsTGV2ZWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Policy/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFBvbGljeVxDcmVhdGVPckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Policy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFBvbGljeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Policy/_ViewAllPolicies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFBvbGljeVxfVmlld0FsbFBvbGljaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstateType/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVUeXBlXENyZWF0ZU9yRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstateType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVUeXBlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstateType/_ViewAllTypes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVUeXBlXF9WaWV3QWxsVHlwZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/ClientRealEstateList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcQ2xpZW50UmVhbEVzdGF0ZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/CustomerConfirmList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcQ3VzdG9tZXJDb25maXJtTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/CustomerExpireList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcQ3VzdG9tZXJFeHBpcmVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewAllRealEstates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX3ZpZXdBbGxSZWFsRXN0YXRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewConfirmList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX3ZpZXdDb25maXJtTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewExpireList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX3ZpZXdFeHBpcmVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_ViewPictures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX1ZpZXdQaWN0dXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewUserAllPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX3ZpZXdVc2VyQWxsUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Account/ConfirmPhone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtUGhvbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/RealEstate/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhbEVzdGF0ZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/RealEstate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhbEVzdGF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/RealEstate/_recommendList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhbEVzdGF0ZVxfcmVjb21tZW5kTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j58zhnt4mo

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Hana.Models.ViewModels.RealEstateViewModel>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Quản lý bài đăng</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a asp-action="CustomerExpireList"><strong>Danh sách quá hạn</strong></a>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+
+<div id="expire-list">
+    @await Html.PartialAsync("_viewExpireList", Model)
+</div>

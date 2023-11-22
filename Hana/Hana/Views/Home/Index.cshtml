@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+@model Hana.Models.ViewModels.Condition;
+
+@section scripts{
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm2-TLINLimNdhUwHUswIiZyYghhta80g&callback=LoadMarker">
+    </script>
+   <div class="container">
+        <script type="text/javascript" src="~/assets/js/maplace-active.js"></script>
+   </div>
+}
+<!-- banner area start -->
+<div class="banner-area jarallax" style="background-image: url(../assets/img/bg/home5.jpg);">
+    <div class="container">
+        <div class="banner-inner-wrap">
+            <div class="main-search-area">
+                <div class="container">
+                    <div class="c1 h1 text-center">Bạn đang tìm gì?</div>
+                    <div class="banner-search-wrap">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active">
+                                <form asp-action="Index" asp-controller="RealEstate" method="get">
+                                    <div class="rld-main-search">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                                <div class="rld-single-input left-icon">
+                                                    <input asp-for="SearchString" type="text" placeholder="Nhập khu vực cần tìm kiếm">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-6 col-md-6 px-xl-0">
+                                                <div class="rld-single-select">
+                                                    <select asp-for="City" class="select single-select" asp-items="ViewBag.Cities">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-6 col-md-6 pr-xl-0">
+                                                <div class="rld-single-select">
+                                                    <select asp-for="Type" class="select single-select" asp-items="ViewBag.Types">
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                                <input class="btn btn-yellow" type="submit" value="TÌM KIẾM" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- banner area end -->
+<div class="section-title text-center">
+    <h2 class="title">Tìm kiếm trên bản đồ</h2>
+</div>
+
+<div class="container">
+    <div class="banner-area banner-search">
+        <div id="map" style="height: 70vh"></div>
+    </div>
+</div>
+

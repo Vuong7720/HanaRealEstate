@@ -1,0 +1,24 @@
+﻿@model Hana.Models.DataModels.Level;
+
+@{Layout = null;}
+
+<div class="row">
+    <div class="col-sm-12 b-r">
+        <form asp-action="CreateOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="LevelName">Level name</label>
+                <input type="text" asp-for="LevelName" class="form-control" />
+                <span asp-validation-for="LevelName" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input type="submit" value="Save"
+                       class="btn btn-sm btn-primary float-right m-t-n-xs">
+            </div>
+        </form>
+    </div>
+
+</div>
+

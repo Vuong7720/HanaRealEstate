@@ -1,0 +1,35 @@
+﻿@model Hana.Models.ViewModels.VM_Login
+
+@{
+    ViewData["Title"] = "Login";
+    var returlUrl = string.Format("{0}{1}", Context.Request.Path, Context.Request.QueryString);
+}
+
+<form class="contact-form-wrap contact-form-bg"
+      asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@returlUrl">
+    <h4 class="font-weight-bold">Đăng nhập</h4>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="text-danger">@ViewBag.ErrorMessage</div>
+    <div class="rld-single-input">
+        <input type="text" asp-for="LoginName" placeholder="Tên đăng nhập/Số điện thoại">
+        <span asp-validation-for="LoginName" class="text-danger"></span>
+    </div>
+    <div class="rld-single-input">
+        <input type="password" asp-for="Password" placeholder="Mật khẩu">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="checkbox checkbox-warning mt-3">
+        <input id="checkbox1" asp-for="IsRememberMe" class="styled" type="checkbox">
+        <label for="checkbox1">
+            Ghi nhớ đăng nhập
+        </label>
+    </div>
+    <div class="btn-wrap d-flex align-items-center">
+        <button class="btn btn-yellow" type="submit">Đăng nhập</button>
+        <div style="margin-top: 23px; padding-left: 23px;">
+            Chưa có tài khoản?
+            <a href="@Url.Action("Register","Account")" style="color: #FDA94F;">Đăng ký</a>
+        </div>
+    </div>
+</form>

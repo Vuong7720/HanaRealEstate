@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Hana.Models.DataModels.Level>;
+
+@{ ViewData["Title"] = "Index";}
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAllLevels", Model)
+</div>
+
+

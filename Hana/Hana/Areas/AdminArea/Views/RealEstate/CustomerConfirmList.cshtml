@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Hana.Models.ViewModels.RealEstateViewModel>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Quản lý bài đăng</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a asp-action="CustomerConfirmList"><strong>Danh sách chờ</strong></a>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+
+<div id="confirm-list-all-posts">
+    @await Html.PartialAsync("_viewConfirmList", Model)
+</div>

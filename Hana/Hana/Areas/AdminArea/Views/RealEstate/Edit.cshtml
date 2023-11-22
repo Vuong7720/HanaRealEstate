@@ -1,0 +1,503 @@
+﻿@model Hana.Models.ViewModels.VM_RealEstateDetails;
+
+@section scripts{
+    <script src="~/js/mustache.min.js"></script>
+    <script src="~/js/pictureServices.js"></script>
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>
+                        Chỉnh sửa thông tin bài đăng
+                    </h5>
+                </div>
+                <div class="ibox-content">
+                    <form asp-action="Edit" id="edit-form" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group row">
+                            <label asp-for="Title" class="col-sm-2 col-form-label">Tiêu đề</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" asp-for="Title" class="form-control" required></textarea>
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <label asp-for="RealEstateTypeId" class="col-sm-2 col-form-label">Loại hình BĐS</label>
+
+                            <div class="col-sm-10 col-lg-4">
+                                <select asp-for="RealEstateTypeId" class="form-control form-control-lg m-b" asp-items="ViewBag.RealEstateTypeId" disabled>
+                                </select>
+                                <input type="hidden" asp-for="RealEstateTypeId" />
+                                <span asp-validation-for="RealEstateTypeId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="RoomNumber" class="col-sm-2 col-form-label">Số lượng phòng</label>
+                            <div class="col-sm-5 col-lg-2">
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <input asp-for="RoomNumber" type="number" class="form-control">
+                                </div>
+                                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Acreage" class="col-sm-2 col-form-label">Diện tích</label>
+                            <div class="col-sm-10 col-lg-4">
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fas fa-arrows-alt"></i></span>
+                                    <input asp-for="Acreage" type="text" placeholder="" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-addon">m2</span>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="Acreage" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Price" class="col-sm-2 col-form-label">Giá phòng</label>
+                            <div class="col-sm-10 col-lg-4">
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fas fa-dollar-sign"></i></span>
+                                    <input asp-for="Price"
+                                           type="text" id="currency-field"
+                                           data-type="currency"
+                                           placeholder="" class="form-control" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-addon">VNĐ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="ElectronicPrice" class="col-sm-2 col-form-label">Giá điện</label>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-10 col-lg-4">
+                                        <div class="input-group m-b">
+                                            <span class="input-group-addon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text"
+                                                   id="tien-wifi"
+                                                   asp-for="ElectronicPrice"
+                                                   data-type="currency"
+                                                   placeholder=""
+                                                   class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-addon">VNĐ/KW</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-lg-2 pt-2">
+                                        <div class="checkbox checkbox-warning d-flex align-items-center">
+                                            <input id="free-tien-dien" class="styled" type="checkbox">
+                                            <label for="free-tien-dien">
+                                                Miễn phí
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="WaterPrice" class="col-sm-2 col-form-label">Giá nước</label>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-10 col-lg-4">
+                                        <div class="input-group m-b">
+                                            <span class="input-group-addon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text"
+                                                   id="tien-nuoc"
+                                                   asp-for="WaterPrice"
+                                                   data-type="currency"
+                                                   placeholder=""
+                                                   class="form-control">
+
+                                            <div class="input-group-append">
+                                                <span class="input-group-addon">VMĐ/m<sub style="vertical-align:super">3</sub></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-lg-2 pt-2">
+                                        <div class="checkbox checkbox-warning d-flex align-items-center">
+                                            <input id="free-tien-nuoc" class="styled" type="checkbox">
+                                            <label for="free-tien-nuoc">
+                                                Miễn phí
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="WifiPrice" class="col-sm-2 col-form-label">Giá wifi</label>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-10 col-lg-4">
+                                        <div class="input-group m-b">
+                                            <span class="input-group-addon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text"
+                                                   id="tien-wifi"
+                                                   asp-for="WifiPrice"
+                                                   data-type="currency"
+                                                   placeholder=""
+                                                   class="form-control">
+
+                                            <div class="input-group-append">
+                                                <span class="input-group-addon">VNĐ/tháng</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-lg-2 pt-2">
+                                        <div class="checkbox checkbox-warning d-flex align-items-center">
+                                            <input id="free-tien-wifi" class="styled" type="checkbox">
+                                            <label for="free-tien-wifi">
+                                                Miễn phí
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Address" class="col-sm-2 col-form-label">Địa chỉ</label>
+                            <div class="col-sm-10">
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input asp-for="Address" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row" id="expire-day">
+                            <label asp-for="BeginTime" class="col-sm-2 col-form-label">Ngày bắt đầu</label>
+                            <div class="col-sm-10 col-lg-4">
+                                <div class="input-group date">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-calendar-minus"></i>
+                                    </span>
+                                    <input asp-for="BeginTime" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <span asp-validation-for="BeginTime" class="text-danger col-sm-12 col-lg-4 mt-2"></span>
+                        </div>
+
+                        <div class="form-group row" id="expire-day">
+                            <label asp-for="ExprireTime" class="col-sm-2 col-form-label">Ngày hết hạn</label>
+                            <div class="col-sm-10 col-lg-4">
+                                <div class="input-group date">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-calendar-plus"></i>
+                                    </span>
+                                    <input asp-for="ExprireTime" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <span asp-validation-for="ExprireTime" class="text-danger col-sm-12 col-lg-4 mt-2"></span>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="ContactNumber" class="col-sm-2 col-form-label">Số điện thoại liên lạc</label>
+                            <div class="col-sm-10 col-lg-4">
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fas fa-mobile-alt"></i></span>
+                                    <input asp-for="ContactNumber" type="text" placeholder="" class="form-control">
+
+                                </div>
+                            </div>
+                            <span asp-validation-for="ContactNumber" class="text-danger col-sm-12 col-lg-4 mt-2"></span>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Tiện ích</label>
+
+                            <div class="col-sm-5">
+                                <div class="checkbox checkbox-warning">
+                                    <input asp-for="HasPrivateWc" id="checkbox1" class="styled" type="checkbox">
+                                    <label for="checkbox1">
+                                        Vệ sinh riêng
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox-warning">
+                                    <input asp-for="HasMezzanine" id="checkbox2" class="styled" type="checkbox">
+                                    <label for="checkbox2">
+                                        Có gác lửng
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox-warning">
+                                    <input asp-for="AllowCook" id="checkbox3" class="styled" type="checkbox">
+                                    <label for="checkbox3">
+                                        Cho phép nấu ăn
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="checkbox checkbox-warning">
+                                    <input asp-for="FreeTime" id="checkbox4" class="styled" type="checkbox">
+                                    <label for="checkbox4">
+                                        Giờ giấc tự do
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox-warning">
+                                    <input asp-for="SecurityCamera" id="checkbox5" class="styled" type="checkbox">
+                                    <label for="checkbox5">
+                                        Camera an ninh
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Hình ảnh</h5><span id="no-image" class="text-info"></span>
+                                    </div>
+                                    <div class="ibox-content no-padding no-top-border">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div id="view-pictures">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-12 pb-2">
+                                                <div class="custom-file">
+                                                    <input asp-for="Files" class="custom-file-input" type="file" multiple />
+                                                    <label class="custom-file-label" asp-for="Files">Chọn hình ảnh</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div class="lightBoxGallery"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Mô tả</h5>
+
+                                    </div>
+                                    <div class="ibox-content no-padding no-top-border">
+                                        <textarea style="min-height:300px" type="text" asp-for="Description" class="form-control summernote" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <a class="btn btn-white btn-sm" asp-action="ClientRealEstateList">Hủy bỏ</a>
+                                <input class="btn btn-yellow btn-sm" type="submit" value="Cập nhật thông tin" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    document.getElementById('free-tien-dien').onchange = function () {
+
+        document.getElementById('tien-dien').disabled = this.checked;
+    };
+    document.getElementById('free-tien-nuoc').onchange = function () {
+        document.getElementById('tien-nuoc').disabled = this.checked;
+    };
+
+    document.getElementById('free-tien-wifi').onchange = function () {
+        document.getElementById('tien-wifi').disabled = this.checked;
+    };
+
+    $("input[data-type='currency']").on({
+        keyup: function () {
+            formatCurrency($(this));
+        },
+        blur: function () {
+            formatCurrency($(this), "blur");
+        }
+    });
+
+
+    function formatNumber(n) {
+        // format number 1000000 to 1,234,567
+        return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+
+
+    function formatCurrency(input, blur) {
+        // appends $ to value, validates decimal side
+        // and puts cursor back in right position.
+
+        // get input value
+        var input_val = input.val();
+
+        // don't validate empty input
+        if (input_val === "") { return; }
+
+        // original length
+        var original_len = input_val.length;
+
+        // initial caret position
+        var caret_pos = input.prop("selectionStart");
+
+        // check for decimal
+        if (input_val.indexOf(".") >= 0) {
+
+            // get position of first decimal
+            // this prevents multiple decimals from
+            // being entered
+            var decimal_pos = input_val.indexOf(".");
+
+            // split number by decimal point
+            var left_side = input_val.substring(0, decimal_pos);
+            var right_side = input_val.substring(decimal_pos);
+
+            // add commas to left side of number
+            left_side = formatNumber(left_side);
+
+            // validate right side
+            right_side = formatNumber(right_side);
+
+            // On blur make sure 2 numbers after decimal
+            if (blur === "blur") {
+                right_side += "00";
+            }
+
+            // Limit decimal to only 2 digits
+            right_side = right_side.substring(0, 2);
+
+            // join number by .
+            input_val = left_side + "." + right_side;
+
+        } else {
+            // no decimal entered
+            // add commas to number
+            // remove all non-digits
+            input_val = formatNumber(input_val);
+            //input_val = "$" + input_val;
+
+            // final formatting
+            if (blur === "blur") {
+                //input_val += ".00";
+            }
+        }
+
+        // send updated string to input
+        input.val(input_val);
+
+        // put caret back in the right position
+        var updated_len = input_val.length;
+        caret_pos = updated_len - original_len + caret_pos;
+        input[0].setSelectionRange(caret_pos, caret_pos);
+
+    }
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#expire-day .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true,
+            format: "dd/mm/yyyy"
+        });
+    });
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.summernote').summernote({
+            height: 200
+        });
+    });
+</script>
+
+<script id="picture-template" type="x-tmpl-mustache">
+    <div class="artist-collection-photo">
+        <img width="200" height="200" style="object-fit:cover;" src="{{PictureUrl}}" class="img-fluid">
+        <button onclick="pictureServices.removePicture({{PictureId}})" id="picture-remove-btn" class="close" type="button">×</button>
+    </div>
+</script>
+
+<script>
+    $(function () {
+        // Multiple images preview in browser
+        var imagesPreview = function (input, placeToInsertImagePreview) {
+
+            if (input.files) {
+                var filesAmount = input.files.length;
+
+                for (i = 0; i < filesAmount; i++) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (event) {
+                        var img = new Image();
+                        var reviewWidth, renderWidth;
+                        img.src = event.target.result;
+
+                        img.onload = function () {
+                            reviewWidth = Number((this.width * 200) / this.height);
+                            //console.log("1: " + reviewWidth);
+                        };
+
+                        renderWidth = isNaN(reviewWidth) ? 200 : reviewWidth;
+                        //console.log("2: " + renderWidth);
+
+                        $($.parseHTML('<img>')).attr({
+                            'src': event.target.result,
+                            'class': 'img-fluid',
+                            'style': 'width:' + reviewWidth + 'px; height: 200px; border-radius: 7px',
+                            'alt': 'preview'
+                        }).appendTo(placeToInsertImagePreview);
+
+                    }
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+        };
+
+        $('#Files').on('change', function () {
+            $("div.lightBoxGallery").html("");
+            imagesPreview(this, 'div.lightBoxGallery');
+
+        });
+    });
+
+</script>

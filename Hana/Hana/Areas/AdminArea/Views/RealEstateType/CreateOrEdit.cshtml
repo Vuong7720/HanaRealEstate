@@ -1,0 +1,24 @@
+﻿@model Hana.Models.DataModels.RealEstateType;
+
+@{Layout = null;}
+
+<div class="row">
+    <div class="col-sm-12 b-r">
+        <form asp-action="CreateOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="RealEstateTypeName">Real estate type name</label>
+                <input type="text" asp-for="RealEstateTypeName" class="form-control" />
+                <span asp-validation-for="RealEstateTypeName" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input type="submit" value="Save"
+                       class="btn btn-sm btn-primary float-right m-t-n-xs">
+            </div>
+        </form>
+    </div>
+
+</div>
+

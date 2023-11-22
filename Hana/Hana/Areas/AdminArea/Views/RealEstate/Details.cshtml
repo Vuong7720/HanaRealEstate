@@ -1,0 +1,402 @@
+﻿@model Hana.Models.ViewModels.VM_RealEstateDetails;
+
+@{
+    var userId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "UserId").Value);
+    var userLevelId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "LevelId").Value);
+
+    string statusLabel = Model.Status switch
+    {
+        "Bị từ chối" => "",
+        "Chờ xác nhận" => "label-success",
+        "Còn phòng" => "label-primary",
+        "Hết hạn" => "label-warning",
+        "Đã khóa" => "label-danger",
+        _ => ""
+    };
+}
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="m-b-md">
+                                @if (userId == Model.AgentId || userLevelId == 1)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-yellow font-weight-bold float-right">Chỉnh sửa</a>
+                                }
+                                <h2>@Model.Title</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Trạng thái:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"><span class="label @statusLabel">@Model.Status</span></dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Loại hình:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1"><span class="label label-success">@Model.RealEstateTypeId</span></dd>
+                                </div>
+                            </dl>
+
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Giá: </dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"> @Helper.VNCurrencyFormat(Model.Price.ToString()) VNĐ</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Diện tích: </dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">@Model.Acreage m2</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Số phòng:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"> @Model.RoomNumber </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Giá điện:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    @if (Model.ElectronicPrice == null || Model.ElectronicPrice == 0)
+                                    {
+                                        <dd class="mb-1">
+                                            Miễn phí
+                                        </dd>
+                                    }
+                                    else
+                                    {
+                                        <dd class="mb-1">
+                                            @Helper.VNCurrencyFormat(Model.ElectronicPrice.ToString()) VNĐ/KW
+                                        </dd>
+                                    }
+                                </div>
+                            </dl>
+
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Giá nước:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    @if (Model.WaterPrice == null || Model.WaterPrice == 0)
+                                    {
+                                        <dd class="mb-1">
+                                            Miễn phí
+                                        </dd>
+                                    }
+                                    else
+                                    {
+                                        if (Model.WaterPrice > 100000)
+                                        {
+                                            <dd class="mb-1">
+                                                @Helper.VNCurrencyFormat(Model.WaterPrice.ToString()) VNĐ/người/tháng
+                                            </dd>
+                                        }
+                                        else
+                                        {
+                                            <dd class="mb-1">
+                                                @Helper.VNCurrencyFormat(Model.WaterPrice.ToString()) VNĐ/m3
+                                            </dd>
+                                        }
+
+                                    }
+                                </div>
+                            </dl>
+
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Giá wifi:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    @if (Model.WifiPrice == null)
+                                    {
+                                        <dd class="mb-1">
+                                            Không xác định
+                                        </dd>
+                                    }
+                                    else if (Model.WifiPrice == 0)
+                                    {
+                                        <dd class="mb-1">
+                                            Miễn phí
+                                        </dd>
+                                    }
+                                    else
+                                    {
+                                        <dd class="mb-1">
+                                            @Helper.VNCurrencyFormat(Model.WifiPrice.ToString()) VNĐ/tháng
+                                        </dd>
+                                    }
+                                </div>
+                            </dl>
+
+                        </div>
+                        <div class="col-lg-6" id="cluster_info">
+
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Ngày đăng:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">@Model.PostTime</dd>
+                                </div>
+                            </dl>
+
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Cập nhật lần cuối:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">@Model.LastUpdate</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Ngày hết hạn:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">@Model.ExprireTime</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mt-2 mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Đăng bởi: </dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"><a href="#" class="text-navy">@Model.AgentName</a> </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>SĐT liên lạc:</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">@Model.ContactNumber</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <dl class="row mb-0">
+                                <div class="col-sm-2 text-sm-right">
+                                    <dt>Địa chỉ:</dt>
+                                </div>
+                                <div class="col-sm-10 text-sm-left">
+                                    <dd class="mb-1">
+                                        @Model.Address
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row m-t-sm">
+                        <div class="col-lg-12">
+                            <div class="ibox">
+                                <div class="ibox-content">
+                                    <h2>Mô tả</h2>
+                                    <div id="div1">
+                                        @Html.Raw(Model.Description)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h2>Tiện ích có sẵn</h2>
+                </div>
+                <div class="ibox-content">
+                    <div class="mb-2">
+                        @if (Model.SecurityCamera)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Camera an ninh</strong>
+                        }
+                    </div>
+                    <div class="mb-2">
+                        @if (Model.HasPrivateWc)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Vệ sinh riêng</strong>
+                        }
+                    </div>
+                    <div class="mb-2">
+                        @if (Model.HasMezzanine)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Có gác lửng</strong>
+                        }
+                    </div>
+                    <div class="mb-2">
+                        @if (Model.AllowCook)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Cho phép nấu ăn</strong>
+                        }
+                    </div>
+                    <div class="mb-2">
+                        @if (Model.FreeTime)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Giờ giấc tự do</strong>
+                        }
+                    </div>
+                    <div class="mb-2">
+                        @if (Model.WifiPrice == 0)
+                        {
+                            <i class="fa fa-check text-warning mr-1"> </i> <strong>Free wifi</strong>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @if (Model.ImageUrls.Count > 0)
+        {
+            @*<div class="row">*@
+            <div class="col-lg-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h2>Hình ảnh thực tế</h2>
+                    </div>
+                    <div class="ibox-content ">
+                        <div id="picturesCarousel" class="carousel slide" data-ride="carousel">
+
+                            <ol class="carousel-indicators">
+                                <li data-target="#picturesCarousel" data-slide-to="0" class="active"></li>
+                                @for (var i = 1; i < Model.ImageUrls.Count; i++)
+                                {
+                                    <li data-target="#picturesCarousel" data-slide-to="@i"></li>
+                                }
+                            </ol>
+
+                            <div class="carousel-inner" style="height: 500px;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <img class="d-block  mx-auto h-100" src="@Model.ImageUrls.First()" alt="">
+                                </div>
+                                @for (var i = 1; i < Model.ImageUrls.Count; i++)
+                                {
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img class="d-block mx-auto h-100" src="@Model.ImageUrls[i]" alt="">
+                                    </div>
+                                }
+                            </div>
+
+                            <a class="carousel-control-prev" href="#picturesCarousel" role="button"
+                               data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#picturesCarousel" role="button"
+                               data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*</div>*@
+        }
+
+        else
+        {
+            @*<div class="row">*@
+            <div class="col-lg-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h2>Hình ảnh thực tế</h2>
+                    </div>
+                    <div class="ibox-content">
+                        Hiện chưa có hình ảnh nào về phòng này
+                    </div>
+                </div>
+            </div>
+            @*</div>*@
+        }
+
+        @*<div class="row">*@
+        <div class="col-lg-12">
+            <div class="ibox-content">
+                <h2>Bản đồ</h2>
+                <strong>@Model.Address</strong>
+                <p class="font-italic">(Vị trí trên bản đồ chỉ mang tính chất tương đối, chưa phải vị trí chính xác)</p>
+                <input type="hidden" id="lat" value="@Model.Latitude" />
+                <input type="hidden" id="longt" value="@Model.Longtitude" />
+                <div id="map" style="height: 500px;"></div>
+            </div>
+        </div>
+        @*</div>*@
+
+        @if (!Model.IsConfirm && userLevelId < 3)
+        {
+            <div class="row pt-3">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <form asp-area="AdminArea" asp-controller="RealEstate"
+                          asp-action="Confirm" asp-route-id="@Model.Id"
+                          asp-route-confirmtype="1"
+                          asp-route-isRedirect="true"
+                          onsubmit="return ConfirmRealEstate(this,1,true);" class="d-inline">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-check"></i> Xác nhận
+                        </button>
+                    </form>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2 ml-3">
+                    <form asp-area="AdminArea" asp-controller="RealEstate"
+                          asp-action="Confirm" asp-route-id="@Model.Id"
+                          asp-route-confirmtype="2"
+                          asp-route-isRedirect="true"
+                          onsubmit="return ConfirmRealEstate(this,2,true);" class="d-inline">
+                        <button class="btn btn-danger" type="submit">
+                            <i class="fas fa-times"></i> Từ chối
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+    </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm2-TLINLimNdhUwHUswIiZyYghhta80g&callback=initMap">
+    </script>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var latitude = document.getElementById('lat').value;
+            var longtitude = document.getElementById('longt').value;
+            var loca = { lat: Number(latitude), lng: Number(longtitude) };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: loca });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: loca, map: map });
+        }
+    </script>
+
+
+
+

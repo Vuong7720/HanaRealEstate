@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Hana.Models.DataModels.Picture>;
+
+@{
+
+    var temp = new List<Hana.Models.DataModels.Picture>();
+    if (Model.Count() > 0)
+    {
+        foreach (var img in Model)
+        {
+
+            //ton tai name = add local
+            if (!string.IsNullOrEmpty(img.PictureName))
+            {
+                img.Url = "/images/" + img.PictureName;
+            }
+
+        }
+        temp = Model.ToList();
+    }
+}
+
+<div class="artist-collection-photo">
+    <form asp-area="AdminArea"
+          asp-controller="RealEstate"
+          asp-action="RemovePicture"
+          asp-route-id="@temp[0].Id"
+          onsubmit="return removePictureAjax(this);">
+        @*<img width="200" height="200" src="@temp[0].Url" class="img-fluid">
+        <button class="close" type="submit">×</button>*@
+    </form>
+</div>
+@for (int i = 0; i < temp.Count(); i++)
+{
+    <div class="artist-collection-photo">
+        <form asp-area="AdminArea"
+              asp-controller="RealEstate"
+              asp-action="RemovePicture"
+              asp-route-id="@temp[i].Id"
+              onsubmit="return removePictureAjax(this);">
+            <img width="200" height="200" src="@temp[i].Url" class="img-fluid">
+            <button class="close" type="submit">×</button>
+        </form>
+    </div>
+}
+
+

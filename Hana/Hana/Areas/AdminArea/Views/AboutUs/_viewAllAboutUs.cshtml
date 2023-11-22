@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Hana.Models.DataModels.AboutUs>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Thông tin về website</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row mb-2 ml-0">
+                        <a onclick="showInPopup('@Url.Action("CreateOrEdit","AboutUs",new { id = 0 },Context.Request.Scheme)','New Content')"
+                           class="btn btn-yellow col-lg-1 mr-2 text-white">Thêm mới</a>
+                        @*<input type="search" class="form-control col-lg-4" placeholder="search" />*@
+                    </div>
+
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    Id
+                                </th>
+                                <th>
+                                    Nội dung
+                                </th>
+                                <th class="text-center">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        @item.Id
+                                    </td>
+                                    <td>@item.Content</td>
+                                    <td class="text-center">
+                                        <a onclick="showInPopup('@Url.Action("CreateOrEdit","AboutUs",new {id=item.Id},Context.Request.Scheme)','Update Content')" class="btn btn-blue btn-circle text-white"><i class="fas fa-pen"></i></a>
+
+                                        <form asp-area="AdminArea" asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                                            <button class="btn btn-warning btn-circle" type="submit">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

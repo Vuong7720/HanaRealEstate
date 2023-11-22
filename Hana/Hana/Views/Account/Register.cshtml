@@ -1,0 +1,71 @@
+﻿@model Hana.Models.ViewModels.VM_Register;
+@{
+    ViewData["Title"] = "Đăng kí";
+}
+
+<!-- breadcrumb area start -->
+<div class="breadcrumb-area jarallax" style="background-image:url(../assets/img/bg/home5.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-inner">
+                    <h1 class="page-title">Registration</h1>
+                    <ul class="page-list">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li>Registration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb area End -->
+<!-- contact area start -->
+<div class="register-page-area pd-bottom-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-10 col-md-10 mb-5 mb-md-0">
+                <form asp-controller="Account" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="contact-form-wrap contact-form-bg">
+                    <h4>Đăng kí</h4>
+                    <p>Sử dụng số điện thoại để đăng ký, bạn sẽ nhận được mã xác nhận số điện thoại gửi qua SMS</p>
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="text-danger">@ViewBag.ErrorMessage</div>
+
+                    <div class="row">
+                        <div class="col-xl-6 col-sm-12">
+                            <div class="rld-single-input">
+                                <input asp-for="PhoneNumber" placeholder="Số điện thoại">
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="rld-single-input">
+                                <input asp-for="AgentName" type="text" placeholder="Họ và tên">
+                                <span asp-validation-for="AgentName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-sm-12">
+                            <div class="rld-single-input">
+                                <input asp-for="Password" type="password" placeholder="Mật khẩu">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-sm-12">
+                            <div class="rld-single-input">
+                                <input asp-for="ConfirmPassword" type="password" placeholder="Xác nhận mật khẩu">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <button type="submit" class="btn btn-yellow">Đăng kí</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- contact area End -->

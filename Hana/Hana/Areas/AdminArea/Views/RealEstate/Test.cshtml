@@ -1,0 +1,81 @@
+﻿@model Hana.Models.ViewModels.VM_RealEstateDetails;
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>
+                        Add new real eastate
+                    </h5>
+                </div>
+                <div class="ibox-content">
+                    <form asp-action="Test" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group row">
+
+                            <div class="col-lg-12">
+                                <div class="ibox">
+                                    <div class="ibox-title">
+                                        <h5>Dropzone.js</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <p>
+                                            <strong>Dropzone.js</strong> is a light weight JavaScript
+
+                                        </p>
+                                        <div class="dropzone" id="dropzoneForm">
+                                            <div class="fallback">
+                                                <input asp-for="Files" type="file" multiple />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary btn-sm" id="submitButton" type="submit">Save changes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    Dropzone.autoDiscover = false;
+    $(document).ready(function () {
+
+
+        var myDropzone = new Dropzone("div#dropzoneForm", {
+            url: "/AdminArea/RealEstate/Test",
+            dictDefaultMessage: "<strong>Drop files here or click to upload. </strong>",
+            paramName: () => "Files", // The name that will be used to transfer the file
+            maxFilesize: 5, // MB,
+            parallelUploads: 10,
+            uploadMultiple: true,
+            acceptedFiles: "image/*",
+            addRemoveLinks: true,
+            autoProcessQueue: false
+
+        });
+        var submitButton = document.getElementById('submitButton');
+
+        submitButton.addEventListener("click", function () {
+            myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+        });
+
+    });
+</script>
+
+

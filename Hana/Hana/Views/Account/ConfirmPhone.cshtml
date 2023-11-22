@@ -1,0 +1,259 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RealDeal - Real Estate HTML Template</title>
+
+    <!-- favicon -->
+    <link rel=icon href="~/assets/img/icon.png" sizes="20x20" type="image/png">
+    <!-- Vendor Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/vendor.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-area navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-toggle="collapse"
+                            data-target="#realdeal_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="index-2.html"><img src="~/assets/img/hakunamatata.jpg" alt="logo"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <a class="btn btn-yellow" href="add-new-property.html">
+                        ADD LISTING <span class="right">
+                            <i class="la la-plus"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="realdeal_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index-2.html">Home 01</a></li>
+                                <li><a href="home02.html">Home 02</a></li>
+                                <li><a href="home03.html">Home 03</a></li>
+                                <li><a href="home04.html">Home 04</a></li>
+                                <li><a href="home05.html">Home 05</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Property</a>
+                            <ul class="sub-menu">
+                                <li><a href="property.html">Property</a></li>
+                                <li><a href="propertys-availavbe.html">Propertys Availavbe</a></li>
+                                <li><a href="propertys-by-city.html">Property By City</a></li>
+                                <li><a href="propertys-recent.html">Property Recent</a></li>
+                                <li><a href="property-details.html">Property Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="advisor.html">Advisor</a></li>
+                                <li><a href="search-map.html">Search Map</a></li>
+                                <li><a href="search-list.html">Search List</a></li>
+                                <li><a href="search-grid.html">Search Grid</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="user-list.html">User List</a></li>
+                                <li><a href="registration.html">Registration</a></li>
+                                <li><a href="404.html">404</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="news-details.html">News Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <a class="btn btn-yellow" href="add-new-property.html">
+                        ADD LISTING <span class="right">
+                            <i class="la la-plus"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+    <!-- breadcrumb area start -->
+    <div class="breadcrumb-area jarallax" style="background-image:url(..assets/img/bg/4.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Registration</h1>
+                        <ul class="page-list">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li>Registration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area End -->
+    <!-- contact area start -->
+    <div class="register-page-area pd-bottom-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-10 col-md-10 mb-5 mb-md-0">
+                    <form asp-action="ConfirmPhone" method="post" class="contact-form-wrap contact-form-bg">
+                        <h4>Confirmation</h4>
+                        <div class="text-danger">@ViewBag.ErrorMessage</div>
+                        <p>
+                            Chúng tôi đã gửi mã xác nhận đến số điện thoại +84 949 891 806, vui lòng nhập mã xác nhận vào
+                            ô bên dưới để hoàn tất đăng kí.
+                        </p>
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="rld-single-input">
+                                    <input type="text" name="ConfirmCode" placeholder="Ma xac nhan">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4">
+                                <button style="margin-top: 10px;" type="submit" class="btn btn-yellow">Xác nhận</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-6">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact area End -->
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="footer-logo" href="#"><img src="~/assets/img/hakunamatata.jpg" alt="logo"></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="footer-social text-sm-right">
+                            <span>FOLLOW US</span>
+                            <ul class="social-icon">
+                                <li>
+                                    <a href="https://www.facebook.com/QuocVuongapk77" target="_blank">
+                                        <i class="fa fa-facebook  "></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Popular Searches</h4>
+                            <ul>
+                                <li><a href="index-2.html">Apartment for Rent</a></li>
+                                <li><a href="about.html">Apartment Low to hide</a></li>
+                                <li><a href="#">Offices for Buy</a></li>
+                                <li><a href="#">Offices for Rent</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Homepress Markets</h4>
+                            <ul>
+                                <li><a href="index-2.html">Los Angeles Offices</a></li>
+                                <li><a href="about.html">Las Vegas Apartment</a></li>
+                                <li><a href="#">Sacramento Townhome</a></li>
+                                <li><a href="#">San Francisco Offices</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <ul>
+                                <li><a href="index-2.html">Pricing Plans</a></li>
+                                <li><a href="about.html">Our Services</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <form class="widget widget-subscribe">
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Full Name">
+                            </div>
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Your@email.com">
+                            </div>
+                            <button class="btn btn-yellow w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right text-center">
+                © Copyright Nexus Property Made with by <a href="https://humg.edu.vn/Pages/home.aspx" target="_blank">
+                    <i class="fa fa-heart"></i><span>Codingeek.</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+    <!-- all plugins here -->
+    <script src="~/assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="~/assets/js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,69 @@
+﻿@{
+    Layout = null;
+}
+@model Hana.Models.ViewModels.VM_Register
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng kí tài khoản</title>
+    <link rel="icon" href="~/assets/img/icon.png" sizes="20x20" type="image/png">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/admin/css/animate.css" rel="stylesheet">
+    <link href="~/admin/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+                <img width="200" height="200" src="~/assets/img/logo6.png" />
+            </div>
+            <h3>Đăng kí thành viên</h3>
+            <div class="text-warning">@ViewBag.Message</div>
+            <form asp-area="AdminArea" class="m-t" asp-action="Register" method="post" asp-route-returnurl="@Model.ReturnUrl">
+                <div class="form-group mt-2">
+                    <input asp-for="Email" type="text" class="form-control rounded border-warning" placeholder="Email" required>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input asp-for="PhoneNumber" type="text" class="form-control rounded border-warning" placeholder="Số điện thoại" required>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input asp-for="AgentName" type="text" class="form-control rounded border-warning" placeholder="Họ và tên" required>
+                    <span asp-validation-for="AgentName" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input asp-for="LoginName" class="form-control rounded border-warning" placeholder="Tài khoản đăng nhập" required>
+                    <span asp-validation-for="LoginName" class="text-danger"></span>
+                    <div class="text-left pl-1" id="check-existed"></div>
+                </div>
+                <div class="form-group mt-2">
+                    <input asp-for="Password" type="password" class="form-control rounded border-warning" placeholder="Mật khẩu" required>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input asp-for="ConfirmPassword" type="password" class="form-control rounded border-warning" placeholder="Xác nhận mật khẩu" required>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-yellow block full-width m-b mt-2">Đăng kí</button>
+
+                <p class="text-muted text-center"><small>Đã có tài khoản?</small></p>
+                <a class="btn btn-sm btn-white btn-block" asp-area="AdminArea" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/admin/js/jquery-3.7.1.min.js"></script>
+    <script src="~/admin/js/popper.min.js"></script>
+    <script src="~/admin/js/bootstrap.js"></script>
+    <script src="~/admin/js/services/hana.js"></script>
+</body>
+</html>
+

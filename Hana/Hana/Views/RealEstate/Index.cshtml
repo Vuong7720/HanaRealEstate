@@ -1,0 +1,213 @@
+﻿@using Hana.Helpers;
+@model Hana.Helpers.CustomPagination;
+
+@{
+    ViewData["Title"] = "Danh sách phòng trọ";
+}
+
+
+@section scripts{
+    <script src="~/js/mustache.min.js"></script>
+    <script src="~/js/realEstate.js"></script>
+}
+<!-- breadcrumb area start -->
+<div class="breadcrumb-area jarallax" style="background-image:url(../assets/img/bg/home6.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-inner">
+                    <h1 class="c1 page-title">Danh sách bài đăng</h1>
+                    <ul class="page-list">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>Tìm kiếm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb area End -->
+<!-- property-area start -->
+<div class="property-area pd-top-20">
+    <div class="container">
+        <form asp-controller="RealEstate" asp-action="Index" method="get">
+            <div class="row">
+                <div class="col-lg-12 mb-2">
+                    <div class="rld-single-input left-icon">
+                        <input asp-for="SearchString" type="text" placeholder="Nhập khu vực cần tìm kiếm">
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-5">
+                    <div class="text-center row">
+                        <div class="col-xl-2 col-lg-6 col-md-6">
+                            <div class="rld-single-select">
+                                <div class="text-left mb-1">Loại phòng</div>
+                                <select asp-for="Type" class="select single-select" asp-items="ViewBag.Types">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6">
+                            <div class="rld-single-select">
+                                <div class="text-left mb-1">Thành phố</div>
+                                <select asp-for="City" class="select single-select" asp-items="ViewBag.Cities">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6">
+                            <div class="rld-single-select">
+                                <div class="text-left mb-1">Quận, huyện</div>
+                                <select asp-for="District" class="select single-select" asp-items="ViewBag.Districts">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6">
+                            <div class="rld-single-select">
+                                <div class="text-left mb-1">Mức giá</div>
+                                <select asp-for="PriceRange" class="select single-select" asp-items="ViewBag.PriceRanges">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6">
+                            <div class="rld-single-select">
+                                <div class="text-left mb-1">Diện tích</div>
+                                <select asp-for="AcreageRange" class="select single-select" asp-items="ViewBag.AcreageRanges">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 d-flex justify-content-end align-items-end">
+                            <button class="btn btn-yellow w-100" type="submit">
+                                <i class="fa fa-filter"></i>
+                                Lọc tin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        @if (Model.Results == null || Model.Results.ToList().Count == 0)
+        {
+            <div class="row mb-5 ml-0">
+                <div class="h4 text-warning">Không tìm thấy kết quả phù hợp</div>
+            </div>
+        }
+        else
+        {
+            <div class="property-filter-area row custom-gutter">
+                @foreach (var item in Model.Results)
+                {
+                    <div class="rld-filter-item col-lg-4 col-sm-6">
+                        <div class="single-feature">
+                            <div class="thumb">
+                                @if (item.ImageUrl == "404")
+                                {
+                                    <img src="~/assets/img/notfound.jpg" style="width:100%;height:100%; object-fit:cover;" alt="img">
+                                }
+
+                                else
+                                {
+                                    @*<img src="@item.ImageUrl" class="w-100 h-100" alt="img">*@
+                                    <img src="@item.ImageUrl" style="width:100%;height:100%; object-fit:cover;" alt="img">
+                                }
+
+                            </div>
+                            <div class="details">
+                                @{
+                                    var formatCurrency = Helper.VNCurrencyFormat(item.Price.ToString());
+                                    var typeName = string.Empty;
+                                    switch (item.Type)
+                                    {
+                                        case 1: typeName = "PHÒNG TRỌ"; break;
+                                        case 2: typeName = "CHUNG CƯ MINI"; break;
+                                        case 3: typeName = "NHÀ NGUYÊN CĂN"; break;
+                                        case 4: typeName = "Ở GHÉP"; break;
+                                        default: typeName = "PHÒNG TRỌ"; break;
+                                    }
+                                }
+
+                                <p class="author text-primary"><i class="fab fa-canadian-maple-leaf"></i> @typeName</p>
+                                <h6 class="title"><a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-map-marker-alt"></i> @item.Street</a></h6>
+                                <div class="d-flex">
+                                    <div class="h5 price mr-auto">@formatCurrency VNĐ/tháng</div>
+                                    <div class="font-weight-bold">
+                                        <img src="~/assets/img/icons/7.png" alt="img"> @item.Acreage m<sub style="vertical-align:super">2</sub>
+                                    </div>
+                                </div>
+
+                                <ul class="info-list d-flex">
+                                    <li class="mr-auto">Đăng bởi: <span class="font-weight-bold">@item.AgentName</span></li>
+                                    <li>@item.PostTime</li>
+                                </ul>
+                                <ul class="contact-list">
+                                    <li><a class="btn btn-yellow" asp-action="Details" asp-route-id="@item.Id">Chi tiết</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 mt20 d-flex justify-content-start align-items-baseline">
+                    <ul class="pagination">
+                        @{
+                            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+
+                            var currentItems = Model.CurrentItems;
+                            var totalItems = Model.TotalItems;
+
+                        }
+                        <li class="page-item @prevDisabled">
+                            <a class="page-link "
+                               asp-action="Index"
+                               asp-route-page="@(Model.PageIndex - 1)">
+                                <i class="fa fa-arrow-left"></i>
+                                Trang trước
+                            </a>
+                        </li>
+
+                        @*@for (var i = 1; i <= Model.TotalPages; i++)
+                            {
+                                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                    <a asp-action="Index"
+                                       asp-route-type="@Model.Type"
+                                       asp-route-city="@Model.City"
+                                       asp-route-district="@Model.District"
+                                       asp-route-priceRange="@Model.PriceRange"
+                                       asp-route-acreageRange="@Model.AcreageRange"
+                                       asp-route-search="@Model.SearchString"
+                                       asp-route-page="@i"
+                                       class="page-link">@i</a>
+                                </li>
+                            }*@
+                        <li class="page-item active">
+                            <a asp-action="Index"
+                               asp-route-page="@Model.PageIndex"
+                               class="page-link">@Model.PageIndex</a>
+                        </li>
+
+                        <li class="page-item @nextDisabled">
+                            <a class="page-link "
+                               asp-action="Index"
+                               asp-route-page="@(Model.PageIndex + 1)">
+                                Trang sau <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="ml-3 font-weight-bold">
+                        @currentItems/@totalItems kết quả.
+                    </div>
+
+                </div>
+            </div>
+        }
+        <!--Property filter Start-->
+
+    </div>
+</div>
+<!-- property area end -->
+
+
+<script id="district-template" type="x-tmpl-mustache">
+    <option value="{{DistrictId}}">{{DistrictName}}</option>
+</script>

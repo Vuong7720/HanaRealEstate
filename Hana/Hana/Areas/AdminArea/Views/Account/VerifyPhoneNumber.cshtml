@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+@model Hana.Models.ViewModels.VM_VerifyPhoneNumber
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Xác nhận số điện thoại</title>
+    <link rel="icon" href="~/assets/img/icon.png" sizes="20x20" type="image/png">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/admin/css/animate.css" rel="stylesheet">
+    <link href="~/admin/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div class="pb-2">
+                <img width="200" height="200" src="~/assets/img/logo6.png" />
+            </div>
+
+            <h3>Xác nhận số điện thoại</h3>
+            <form class="m-t" asp-action="VerifyPhoneNumber" method="post">
+                <div class="form-group mt-2">
+                    <input type="text" class="form-control rounded border-warning" asp-for="PhoneNumber" placeholder="Số điện thoại" readonly>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input type="text" class="form-control rounded border-warning" asp-for="VerificationCode" placeholder="Mã xác nhận" required>
+                    <span asp-validation-for="VerificationCode" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-yellow block full-width m-b mt-2">Xác nhận</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/admin/js/jquery-3.7.1.min.js"></script>
+    <script src="~/admin/js/popper.min.js"></script>
+    <script src="~/admin/js/bootstrap.js"></script>
+    <script src="~/admin/js/services/hana.js"></script>
+</body>
+
+</html>

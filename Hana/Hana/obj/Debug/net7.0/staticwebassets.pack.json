@@ -1,0 +1,1177 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Hana.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Hana.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\animate.css",
+      "PackagePath": "staticwebassets\\admin\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\admin\\css\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.structure.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.structure.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.structure.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.structure.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.theme.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.theme.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\jquery-ui.theme.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\jquery-ui.theme.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\3.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\4.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\4.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\header-profile-skin-1.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\header-profile-skin-1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\header-profile-skin-2.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\header-profile-skin-2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\header-profile-skin-3.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\header-profile-skin-3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\header-profile.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\header-profile.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\patterns\\shattered.png",
+      "PackagePath": "staticwebassets\\admin\\css\\patterns\\shattered.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\dataTables\\datatables.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\dataTables\\datatables.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\datapicker\\datepicker3.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\datapicker\\datepicker3.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\dropzone\\basic.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\dropzone\\basic.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\dropzone\\dropzone.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\dropzone\\dropzone.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\alpha-horizontal.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\alpha-horizontal.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\alpha.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\alpha.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\hue-horizontal.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\hue-horizontal.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\hue.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\hue.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\saturation.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\bootstrap-colorpicker\\saturation.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\images\\sprite-skin-flat.png",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\images\\sprite-skin-flat.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.eot",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.ttf",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.woff",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\summernote\\font\\summernote9d3d.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\summernote\\font\\summernoted41d.eot",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\summernote\\font\\summernoted41d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\summernote\\summernote-bs4.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\summernote\\summernote-bs4.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\plugins\\sweetalert\\sweetalert.css",
+      "PackagePath": "staticwebassets\\admin\\css\\plugins\\sweetalert\\sweetalert.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.eot",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.svg",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.svg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.ttf",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff2",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff2"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regulard41d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a1.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a3.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a4.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a5.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a5.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a6.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a7.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a7.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\a8.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\a8.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\ami.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ami.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\img\\profile_small.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profile_small.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\admin\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\inspinia.js",
+      "PackagePath": "staticwebassets\\admin\\js\\inspinia.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\modal.js",
+      "PackagePath": "staticwebassets\\admin\\js\\modal.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\dataTables\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\dataTables\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\dataTables\\datatables.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\dataTables\\datatables.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\datapicker\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\datapicker\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\dropzone\\dropzone.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\dropzone\\dropzone.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\metisMenu\\jquery.metisMenu.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\metisMenu\\jquery.metisMenu.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\pace\\pace.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\pace\\pace.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\slimscroll\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\slimscroll\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\summernote\\summernote-bs4.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\summernote\\summernote-bs4.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\plugins\\sweetalert\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\sweetalert\\sweetalert.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\services\\aboutUs.js",
+      "PackagePath": "staticwebassets\\admin\\js\\services\\aboutUs.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\services\\hana.js",
+      "PackagePath": "staticwebassets\\admin\\js\\services\\hana.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\admin\\js\\services\\realEstateServices.js",
+      "PackagePath": "staticwebassets\\admin\\js\\services\\realEstateServices.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\css\\vendor.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendor.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\Flaticond41d.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticond41d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.svg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfont3e6e.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont3e6e.woff2"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesome0176.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesome0176.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesomeeb4f.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesomeeb4f.eot"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesomeeb4f.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesomeeb4f.svg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesomeeb4f.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesomeeb4f.ttf"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesomeeb4f.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesomeeb4f.woff"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\line-awesomeeb4f.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\line-awesomeeb4f.woff2"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\slick-2.html",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick-2.html"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\slick.html",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.html"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\fonts\\slickd41d.html",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slickd41d.html"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\img\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\author\\1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\author\\1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\author\\2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\author\\2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\author\\3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\author\\3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\author\\4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\author\\4.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\avatar.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatar.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\banner\\2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\banner\\3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\5.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\6.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\home2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\home3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\home3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\home4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\home4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\home5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\home5.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\bg\\home6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\home6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\custom-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\custom-logo.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\custome-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\custome-logo.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\final-logo-backup.png",
+      "PackagePath": "staticwebassets\\assets\\img\\final-logo-backup.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\final-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\final-logo.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\footer-logo.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icon.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\10.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\10.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\11.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\11.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\12.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\12.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\13.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\13.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\14.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\14.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\15.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\15.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\16.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\16.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\17.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\17.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\18.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\18.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\19.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\19.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\20.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\20.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\21.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\21.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\22.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\22.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\26.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\26.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\27.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\27.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\28.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\28.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\29.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\29.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\30.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\30.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\31.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\31.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\4.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\5.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\6.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\7.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\7.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\8.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\8.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\9.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l3.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l4.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l5.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icons\\l6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\l6.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo1.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo2.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo4.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo5.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo6.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\notfound-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\notfound-2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\notfound.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\notfound.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\tin_het_han.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tin_het_han.png"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\js\\maplace-active.js",
+      "PackagePath": "staticwebassets\\assets\\js\\maplace-active.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\js\\vendor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\all.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\css\\awesome-bootstrap-checkbox.css",
+      "PackagePath": "staticwebassets\\css\\awesome-bootstrap-checkbox.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\054f6f33-0710-408b-b734-076940510188-a8e6c9033c5bc1f5b86d0400387cede6.jpg",
+      "PackagePath": "staticwebassets\\images\\054f6f33-0710-408b-b734-076940510188-a8e6c9033c5bc1f5b86d0400387cede6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\10e5d014-4441-40dc-8b89-8588554b98dc-maxresdefault.jpg",
+      "PackagePath": "staticwebassets\\images\\10e5d014-4441-40dc-8b89-8588554b98dc-maxresdefault.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\1fde7ff4-37a6-4828-a4e6-3fbbe661aef3-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg",
+      "PackagePath": "staticwebassets\\images\\1fde7ff4-37a6-4828-a4e6-3fbbe661aef3-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\2039ddec-18be-4d71-a91b-b9901cc1693e-home3.jpg",
+      "PackagePath": "staticwebassets\\images\\2039ddec-18be-4d71-a91b-b9901cc1693e-home3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\20cb78c9-e9a4-48a3-ac62-a9c8d07d30d7-imager_39_6263_700.jpg",
+      "PackagePath": "staticwebassets\\images\\20cb78c9-e9a4-48a3-ac62-a9c8d07d30d7-imager_39_6263_700.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\220bed3e-78df-4451-99e1-254c58ee05c7-home3.jpg",
+      "PackagePath": "staticwebassets\\images\\220bed3e-78df-4451-99e1-254c58ee05c7-home3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\271f119f-e78e-4d14-80bf-ef02b4d44220-home2 - Sao chép.jpg",
+      "PackagePath": "staticwebassets\\images\\271f119f-e78e-4d14-80bf-ef02b4d44220-home2 - Sao chép.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\2d3d4ba1-db4d-4345-abe1-41ed6e82079a-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\2d3d4ba1-db4d-4345-abe1-41ed6e82079a-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\310ae827-d0f3-479c-bf69-b3d4f770d653-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-38.jpg",
+      "PackagePath": "staticwebassets\\images\\310ae827-d0f3-479c-bf69-b3d4f770d653-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-38.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\39302bb3-1925-4e1a-8395-a9a38a035b7e-league-of-legends-lol-spirit-blossom-yasuo-voi-yone-hinh-nen-1920x1200_6.jpg",
+      "PackagePath": "staticwebassets\\images\\39302bb3-1925-4e1a-8395-a9a38a035b7e-league-of-legends-lol-spirit-blossom-yasuo-voi-yone-hinh-nen-1920x1200_6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\41e77b28-0383-4ae5-ab2a-4c05abed05ce-hinh-nen-doremon-14.jpg",
+      "PackagePath": "staticwebassets\\images\\41e77b28-0383-4ae5-ab2a-4c05abed05ce-hinh-nen-doremon-14.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\426562e7-91dd-4a03-96b9-041c13c8033a-cbc.jpg",
+      "PackagePath": "staticwebassets\\images\\426562e7-91dd-4a03-96b9-041c13c8033a-cbc.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\5b60466d-db02-416a-a2d6-b5692192d9f4-nền4.jpg",
+      "PackagePath": "staticwebassets\\images\\5b60466d-db02-416a-a2d6-b5692192d9f4-nền4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\64d00a01-1c98-43c8-b40e-24e8f213c361-nền7.jpg",
+      "PackagePath": "staticwebassets\\images\\64d00a01-1c98-43c8-b40e-24e8f213c361-nền7.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\6d3748e8-9bac-4021-9ea5-23013e641cf0-game4v-tu-linh-te.jpg",
+      "PackagePath": "staticwebassets\\images\\6d3748e8-9bac-4021-9ea5-23013e641cf0-game4v-tu-linh-te.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\7053f8e2-9ae6-4df9-aec2-ae128e6c7c8c-Van sent you a Pin!.jpeg",
+      "PackagePath": "staticwebassets\\images\\7053f8e2-9ae6-4df9-aec2-ae128e6c7c8c-Van sent you a Pin!.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\718a02b5-c66c-46c1-9892-003ca3d3b509-hinh-nen-anime-your-name_110749826.jpg",
+      "PackagePath": "staticwebassets\\images\\718a02b5-c66c-46c1-9892-003ca3d3b509-hinh-nen-anime-your-name_110749826.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\73290c67-f266-4806-a78f-696e441b3f9e-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\73290c67-f266-4806-a78f-696e441b3f9e-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\74814565-6a57-4cb3-9705-b5234bc58773-088d82b27570fccc9f4366d549390bb7.jpg",
+      "PackagePath": "staticwebassets\\images\\74814565-6a57-4cb3-9705-b5234bc58773-088d82b27570fccc9f4366d549390bb7.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\7924fbef-8a7e-489c-bac5-d382eca16b0d-nền8.jpg",
+      "PackagePath": "staticwebassets\\images\\7924fbef-8a7e-489c-bac5-d382eca16b0d-nền8.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\81ced528-6e43-4181-84de-21c309f5acfe-088d82b27570fccc9f4366d549390bb7.jpg",
+      "PackagePath": "staticwebassets\\images\\81ced528-6e43-4181-84de-21c309f5acfe-088d82b27570fccc9f4366d549390bb7.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\8d44fced-cad3-482e-9458-d9b9e51c9c9c-│▌@NIXEU ⊳ illustration _ league of legends _ luxanna _ lux.jpg",
+      "PackagePath": "staticwebassets\\images\\8d44fced-cad3-482e-9458-d9b9e51c9c9c-│▌@NIXEU ⊳ illustration _ league of legends _ luxanna _ lux.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\920e92d6-90bc-4c0e-8cbc-5f16312f5d8b-home2 - Sao chép.jpg",
+      "PackagePath": "staticwebassets\\images\\920e92d6-90bc-4c0e-8cbc-5f16312f5d8b-home2 - Sao chép.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\951de9bc-c08e-42b7-802b-804d0ccae47b-home1 - Sao chép.jpeg",
+      "PackagePath": "staticwebassets\\images\\951de9bc-c08e-42b7-802b-804d0ccae47b-home1 - Sao chép.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\95c9ff13-4de2-4d3b-9cf2-11cf7d642780-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg",
+      "PackagePath": "staticwebassets\\images\\95c9ff13-4de2-4d3b-9cf2-11cf7d642780-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a777b3fa-e287-4990-a8ad-0bd3b022e103-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\a777b3fa-e287-4990-a8ad-0bd3b022e103-home1.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a7e707ac-1c33-4d4e-80b2-958a9e428339-home5.jpg",
+      "PackagePath": "staticwebassets\\images\\a7e707ac-1c33-4d4e-80b2-958a9e428339-home5.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a9ddca13-c8d0-44fc-8214-00e3a41cb33c-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\a9ddca13-c8d0-44fc-8214-00e3a41cb33c-home1.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\aa811f81-5a7a-4839-9d64-81fc9d095fa5-home4.jpg",
+      "PackagePath": "staticwebassets\\images\\aa811f81-5a7a-4839-9d64-81fc9d095fa5-home4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\b01bb7c9-0a02-4ae5-a7da-6f45e0cffd52-home1 - Sao chép.jpeg",
+      "PackagePath": "staticwebassets\\images\\b01bb7c9-0a02-4ae5-a7da-6f45e0cffd52-home1 - Sao chép.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\bde994d0-9232-493b-a697-9ed63e83fa5c-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\bde994d0-9232-493b-a697-9ed63e83fa5c-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\c55c7582-d9b7-4500-bd8c-41dc8e753944-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\c55c7582-d9b7-4500-bd8c-41dc8e753944-home1.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\cf50c6a7-c110-42bb-a66d-4e2487853368-nền6.jpg",
+      "PackagePath": "staticwebassets\\images\\cf50c6a7-c110-42bb-a66d-4e2487853368-nền6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\cfb58ccc-3276-4cef-8e9b-f98ff92e314a-home5.jpg",
+      "PackagePath": "staticwebassets\\images\\cfb58ccc-3276-4cef-8e9b-f98ff92e314a-home5.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\d63078a8-06be-412d-b1b4-d5ebbf2382c3-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\d63078a8-06be-412d-b1b4-d5ebbf2382c3-home1.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\d7d87b4a-bbc1-448e-b3ac-6e906f62437a-WLOP-fantasy-girl-anime-girls-2100171-wallhere.com.jpg",
+      "PackagePath": "staticwebassets\\images\\d7d87b4a-bbc1-448e-b3ac-6e906f62437a-WLOP-fantasy-girl-anime-girls-2100171-wallhere.com.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\d966009a-1b2d-42ae-b7e5-d2e770e18abf-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\d966009a-1b2d-42ae-b7e5-d2e770e18abf-home1.jpeg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\e18fdc63-faab-4c95-858d-b5764b254364-home6.jpg",
+      "PackagePath": "staticwebassets\\images\\e18fdc63-faab-4c95-858d-b5764b254364-home6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\e1d17cf2-fdd2-4057-a672-5b1fa55f4b3e-hinh-nen-anime-cho-may-tinh-8.jpg",
+      "PackagePath": "staticwebassets\\images\\e1d17cf2-fdd2-4057-a672-5b1fa55f4b3e-hinh-nen-anime-cho-may-tinh-8.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\e635f561-9c94-46a0-8911-f35cc49072d1-home4.jpg",
+      "PackagePath": "staticwebassets\\images\\e635f561-9c94-46a0-8911-f35cc49072d1-home4.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\e8f65ef0-38c2-4d72-a16a-472c2b6d4a31-anh-nen-trung-quoc-hoat-hinh_104156803.jpg",
+      "PackagePath": "staticwebassets\\images\\e8f65ef0-38c2-4d72-a16a-472c2b6d4a31-anh-nen-trung-quoc-hoat-hinh_104156803.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\fae857d9-a9a7-4f24-892f-41e8a348cb9d-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\fae857d9-a9a7-4f24-892f-41e8a348cb9d-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\fee2b313-48d8-41d7-a10e-313f4969a88d-home3.jpg",
+      "PackagePath": "staticwebassets\\images\\fee2b313-48d8-41d7-a10e-313f4969a88d-home3.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\all.js",
+      "PackagePath": "staticwebassets\\js\\all.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\formatHtml.js",
+      "PackagePath": "staticwebassets\\js\\formatHtml.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\mustache.min.js",
+      "PackagePath": "staticwebassets\\js\\mustache.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\pagination.min.js",
+      "PackagePath": "staticwebassets\\js\\pagination.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\pictureServices.js",
+      "PackagePath": "staticwebassets\\js\\pictureServices.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\js\\realEstate.js",
+      "PackagePath": "staticwebassets\\js\\realEstate.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\jquery-3.7.1.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery-3.7.1.slim.min.js"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\lib\\jquery\\jquery-3.7.1.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery-3.7.1.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Hana.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Hana.props",
+      "PackagePath": "build\\Hana.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Hana.props",
+      "PackagePath": "buildMultiTargeting\\Hana.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Hana.props",
+      "PackagePath": "buildTransitive\\Hana.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

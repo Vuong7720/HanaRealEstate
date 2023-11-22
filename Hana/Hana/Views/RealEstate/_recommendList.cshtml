@@ -1,0 +1,62 @@
+﻿@using Hana.Helpers;
+@model IEnumerable<Hana.Models.ViewModels.Result>;
+
+<div class="row">
+    @if (Model == null || Model.Count() == 0)
+    {
+        <div class="text-info">Không có gợi ý phù hợp</div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <div class="rld-filter-item col-lg-3 col-sm-6">
+                <div class="single-feature">
+                    <div class="thumb">
+                        @if (item.ImageUrl == "404")
+                        {
+                            <img src="~/assets/img/notfound-2.jpg" style="width:100%; object-fit:cover;" alt="img">
+                        }
+
+                        else
+                        {
+                            <img src="@item.ImageUrl" style="width:100%; height:100%; object-fit:cover;" alt="img">
+                        }
+
+                    </div>
+                    <div class="details">
+                        @{
+                            var formatCurrency = Helper.VNCurrencyFormat(item.Price.ToString());
+                            var typeName = string.Empty;
+                            switch (item.Type)
+                            {
+                                case 1: typeName = "PHÒNG TRỌ"; break;
+                                case 2: typeName = "CHUNG CƯ MINI"; break;
+                                case 3: typeName = "NHÀ NGUYÊN CĂN"; break;
+                                case 4: typeName = "Ở GHÉP"; break;
+                                default: typeName = "PHÒNG TRỌ"; break;
+                            }
+                        }
+
+                        <p class="author recommend-street text-primary"><i class="fab fa-canadian-maple-leaf"></i> @typeName</p>
+                        <h6 class="title recommend-title"><a href="#"><i class="fas fa-map-marker-alt"></i> @item.Street</a></h6>
+                        <div class="d-flex">
+                            <div class="h5 price mr-auto">@formatCurrency</div>
+                            <div class="font-weight-bold">
+                                <img src="~/assets/img/icons/7.png" alt="img"> @item.Acreage m<sub style="vertical-align:super">2</sub>
+                            </div>
+                        </div>
+
+                        <ul class="info-list d-flex">
+                            <li class="mr-auto">Đăng bởi: <span class="font-weight-bold">@item.AgentName</span></li>
+                            <li>@item.PostTime</li>
+                        </ul>
+                        <ul class="contact-list">
+                            <li><a class="btn btn-yellow" asp-action="Details" asp-route-id="@item.Id">Chi tiết</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

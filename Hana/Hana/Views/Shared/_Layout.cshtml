@@ -1,0 +1,202 @@
+﻿@using Hana.Models.ViewModels;
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+
+    <!-- favicon -->
+    <link rel=icon href=~/assets/img/icon.png sizes="20x20" type="image/png">
+    <!-- Vendor Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/vendor.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <link rel="stylesheet" href="~/css/awesome-bootstrap-checkbox.css" />
+    <script src="~/admin/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-area navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-toggle="collapse"
+                            data-target="#realdeal_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index" ><img src="~/assets/img/logo6.png" style="width: 140px; height:70px;" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="realdeal_main_menu">
+                    <ul class="navbar-nav menu-open">                      
+                        <li class="menu-item-has-children">
+                            <a href="#">Menu</a>
+                            <ul class="sub-menu">
+                                <li><a asp-controller="RealEstate" asp-area="AdminArea" asp-action="ClientRealEstateList" target="_blank">Trang quản lý</a></li>
+                                <li><a asp-controller="Account" asp-area="AdminArea" asp-action="Login" target="_blank">Đăng nhập</a></li>
+                                <li><a asp-controller="Account" asp-area="AdminArea" asp-action="Register" target="_blank">Đăng kí</a></li>
+                                <li><a href="#map">Bản đồ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop ml-2 mr-2">
+                    <a class="btn btn-yellow" href="/RealEstate" target="_self">
+                        Xem Tất Cả<span class="right">
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <a class="btn btn-yellow" asp-controller="RealEstate" asp-area="AdminArea" asp-action="Create" target="_blank">
+                        ĐĂNG TIN<span class="right">
+                            <i class="la la-plus"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    @RenderBody()
+
+    <!--login modal-->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="form">
+            <div class="modal-content">
+                <div class="modal-content">
+                    @await Html.PartialAsync("_LoginPartial", new VM_Login())
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end login modal-->
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a class="footer-logo" asp-controller="Home" asp-action="Index"><img src="~/assets/img/logo6.png" style="width: 200px;" alt="logo"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-social text-sm-right">
+                            <span>FOLLOW US</span>
+                            <ul class="social-icon">
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook  "></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter  "></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Danh mục</h4>
+                            <ul>
+                                <li><a asp-controller="RealEstate" asp-action="Index" asp-route-type="1">Phòng trọ, nhà trọ</a></li>
+                                <li><a asp-controller="RealEstate" asp-action="Index" asp-route-type="2">Nhà nguyên căn</a></li>
+                                <li><a asp-controller="RealEstate" asp-action="Index" asp-route-type="3">Căn hộ</a></li>
+                                <li><a asp-controller="RealEstate" asp-action="Index" asp-route-type="4">Ở ghép</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Về website</h4>
+                            <ul>
+                                <li><a href="#">Quy định</a></li>
+                                <li><a href="#">Chính sách</a></li>
+                                <li><a href="#">Câu hỏi thường gặp</a></li>
+                                <li><a href="#">Đăng kí thành viên</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Danh mục</h4>
+                            <ul>
+                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="#">Đăng kí</a></li>
+                                <li><a href="#">Đăng nhập</a></li>
+                                <li><a href="#">Trang quản lý</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <form class="widget widget-subscribe">
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Họ tên">
+                            </div>
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Email@email.com">
+                            </div>
+                            <button class="btn btn-yellow w-100">Đăng kí</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right text-center">
+                © Hana made with by <a href="#" target="_blank">
+                    <i class="fa fa-heart"></i><span>Quoc Vuong.</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    
+    <!-- all plugins here -->
+    <script src="~/assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="~/assets/js/main.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Hana.Models.ViewModels.RealEstateViewModel>
+
+@{
+    var alertType = @ViewBag.MessageType == 1 ? "alert-success" : "alert-danger";
+    int i = 1;
+}
+<script>
+    $(document).ready(function () {
+        $('#example').dataTable({
+            "language": {
+                "sProcessing": "Đang xử lý...",
+                "sLengthMenu": "_MENU_",
+                "sZeroRecords": "Không tìm thấy dòng nào phù hợp",
+                "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                "sInfoPostFix": "",
+                "sSearch": "Tìm:",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "Đầu",
+                    "sPrevious": "Trước",
+                    "sNext": "Tiếp",
+                    "sLast": "Cuối"
+                }
+            },
+            "columnDefs": [
+                {
+                    "targets": [1,8],
+                    "orderable": false
+                }
+            ]
+        });
+
+    });
+</script>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert @alertType alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @ViewBag.Message
+                        </div>
+                    }
+                </div>
+                <div class="ibox-content">
+                    <div class="table-responsive my-custom-table">
+                        <table id="example" class="table table-striped table-bordered table-hover ">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Địa chỉ</th>
+                                    <th class="text-center">Loại phòng</th>
+                                    <th class="text-center">Giá/tháng(VNĐ)</th>
+                                    <th class="text-center">Ngày bắt đầu</th>
+                                    <th class="text-center">Ngày hết hạn</th>
+                                    <th class="text-center">Đăng bởi</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model == null || Model.Count() == 0)
+                                {
+                                    <tr>
+                                        <td class="no-post-td">Tất cả đã được xác nhận. Bấm <a asp-controller="RealEstate" asp-action="Index">vào đây</a>  để xem tất cả bài đăng</td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td class="text-center">@(i++)</td>
+                                            <td class="truncate">@item.Street</td>
+                                            <td class="text-center">@item.Type</td>
+                                            <td class="text-center">@item.Price</td>
+                                            <td class="text-center">@item.BeginTime</td>
+                                            <td class="text-center">@item.ExpireTime</td>
+                                            <td>@item.Agent</td>
+                                            <td>@item.Status</td>
+
+                                            <td class="text-center">
+                                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-blue btn-circle" type="button">
+                                                    <i class="fa fa-info"></i>
+                                                </a>
+                                                <form asp-area="AdminArea" asp-controller="RealEstate" asp-action="Confirm" asp-route-id="@item.Id" asp-route-confirmtype="1" onsubmit="return ConfirmRealEstate(this,1);" class="d-inline">
+                                                    <button class="btn btn-primary btn-circle" type="submit" title="Xác nhận">
+                                                        <i class="fas fa-check"></i>
+                                                    </button>
+                                                </form>
+                                                <form asp-area="AdminArea" asp-controller="RealEstate" asp-action="Confirm" asp-route-id="@item.Id" asp-route-confirmtype="2" onsubmit="return ConfirmRealEstate(this,2);" class="d-inline">
+                                                    <button class="btn btn-danger btn-circle" type="submit" title="Từ chối">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

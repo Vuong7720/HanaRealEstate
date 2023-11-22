@@ -1,0 +1,26 @@
+﻿@model Hana.Models.DataModels.AboutUs;
+
+@{Layout = null;}
+
+    <div class="row">
+        <div class="col-sm-12 b-r">
+            <form asp-action="CreateOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Content">Content</label>
+                    <textarea type="text" asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                
+                <div>
+                    <input 
+                           class="btn btn-sm btn-primary float-right m-t-n-xs"
+                           type="submit"
+                           value="Save">                                     
+                </div>
+            </form>
+        </div>
+        
+    </div>
+

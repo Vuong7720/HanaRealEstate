@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Hana.Models.DataModels.RealEstateType>
+
+<script>
+    $(document).ready(function () {
+        $('#example').dataTable({
+            "language": {
+                "sProcessing": "Đang xử lý...",
+                "sLengthMenu": "Xem _MENU_ mục",
+                "sZeroRecords": "Không tìm thấy dòng nào phù hợp",
+                "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+                "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+                "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+                "sInfoPostFix": "",
+                "sSearch": "Tìm:",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "Đầu",
+                    "sPrevious": "Trước",
+                    "sNext": "Tiếp",
+                    "sLast": "Cuối"
+                }
+            },
+            "columnDefs": [
+                {
+                    "targets": 2,
+                    "orderable": false
+                }
+            ]
+        });
+
+    });
+</script>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Danh sách các loại hình BĐS</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row mb-2 ml-0">
+                        <a onclick="showInPopup('@Url.Action("CreateOrEdit","RealEstateType",new { id = 0 },Context.Request.Scheme)','Thêm mới')" class="btn btn-yellow col-lg-1 mr-2 text-white">Thêm mới</a>
+                        
+                    </div>
+
+                    <table id="example" class="table table-hover table-bordered">
+                        <thead>
+                            <tr class="">
+                                <th class="text-center">
+                                    Id
+                                </th>
+                                <th>
+                                    Tên loại hình
+                                </th>
+                                <th class="text-center">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        @item.Id
+                                    </td>
+                                    <td>@item.RealEstateTypeName</td>
+                                    <td class="text-center">
+                                        <a title="Chỉnh sửa" onclick="showInPopup('@Url.Action("CreateOrEdit","RealEstateType",new {id=item.Id},Context.Request.Scheme)','Đổi tên')" class="btn btn-blue btn-circle text-white"><i class="fas fa-pen"></i></a>
+
+                                        <form asp-area="AdminArea" asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
+                                            <button class="btn btn-danger btn-circle" title="Xóa" type="submit">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
