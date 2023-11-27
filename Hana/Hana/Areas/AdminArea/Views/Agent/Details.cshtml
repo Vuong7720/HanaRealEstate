@@ -37,7 +37,19 @@
                         </td>
                         @if (Model.IsActive)
                         {
-                            <td style="border:none !important"><a href="#" class="btn btn-infoz">Disable now</a></td>
+                            <form asp-area="AdminArea" asp-controller="Agent" asp-action="Disable" asp-route-id="@Model.Id" onsubmit="return DisableAgent(this);" class="d-inline">
+                                <button class="btn btn-info" title="Khóa" type="submit">
+                                   Khóa
+                                </button>
+                            </form>
+                        }
+                        @if (!Model.IsActive)
+                        {
+                            <form asp-area="AdminArea" asp-controller="Agent" asp-action="Enable" asp-route-id="@Model.Id" onsubmit="return EnableAgent(this);" class="d-inline">
+                                <button class="btn btn-info" title="Mở" type="submit">
+                                    Mở
+                                </button>
+                            </form>
                         }
                     </tr>
                     <tr>

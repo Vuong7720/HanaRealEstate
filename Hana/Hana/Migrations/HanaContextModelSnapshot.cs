@@ -213,10 +213,10 @@ namespace Hana.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal?>("Latitude")
-                        .HasColumnType("decimal(10,0)");
+                        .HasColumnType("decimal(9,7)");
 
                     b.Property<decimal?>("Longtitude")
-                        .HasColumnType("decimal(10,0)");
+                        .HasColumnType("decimal(10,7)");
 
                     b.Property<int?>("RealEstateId")
                         .HasColumnType("int");

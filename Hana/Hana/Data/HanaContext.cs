@@ -146,9 +146,9 @@ namespace Hana.Data
                     .IsRequired()
                     .HasMaxLength(300);
 
-                entity.Property(e => e.Latitude).HasColumnType("decimal(10,0)");
+                entity.Property(e => e.Latitude).HasColumnType("decimal(9,7)");
 
-                entity.Property(e => e.Longtitude).HasColumnType("decimal(10,0)");
+                entity.Property(e => e.Longtitude).HasColumnType("decimal(10,7)");
 
                 entity.HasOne(d => d.City)
                     .WithMany(p => p.Map)

@@ -493,28 +493,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\bg\\home6.jpg"
     },
     {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\custom-logo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\custom-logo.png"
-    },
-    {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\custome-logo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\custome-logo.png"
-    },
-    {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
-    },
-    {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\final-logo-backup.png",
-      "PackagePath": "staticwebassets\\assets\\img\\final-logo-backup.png"
-    },
-    {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\final-logo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\final-logo.png"
-    },
-    {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\footer-logo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\footer-logo.png"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\icon.png",
@@ -657,16 +637,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\icons\\l6.png"
     },
     {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo.png",
-      "PackagePath": "staticwebassets\\assets\\img\\logo.png"
-    },
-    {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo1.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo1.png"
-    },
-    {
-      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\logo2.png"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\assets\\img\\logo4.png",
@@ -733,6 +705,10 @@
       "PackagePath": "staticwebassets\\images\\1fde7ff4-37a6-4828-a4e6-3fbbe661aef3-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg"
     },
     {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\20076e7a-66c5-4d41-939f-bcf6b00a07f3-home2 - Sao chép.jpg",
+      "PackagePath": "staticwebassets\\images\\20076e7a-66c5-4d41-939f-bcf6b00a07f3-home2 - Sao chép.jpg"
+    },
+    {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\2039ddec-18be-4d71-a91b-b9901cc1693e-home3.jpg",
       "PackagePath": "staticwebassets\\images\\2039ddec-18be-4d71-a91b-b9901cc1693e-home3.jpg"
     },
@@ -747,6 +723,10 @@
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\271f119f-e78e-4d14-80bf-ef02b4d44220-home2 - Sao chép.jpg",
       "PackagePath": "staticwebassets\\images\\271f119f-e78e-4d14-80bf-ef02b4d44220-home2 - Sao chép.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\29ebec54-7ad5-4449-9cea-a2b211e7a66b-home1 - Sao chép.jpeg",
+      "PackagePath": "staticwebassets\\images\\29ebec54-7ad5-4449-9cea-a2b211e7a66b-home1 - Sao chép.jpeg"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\2d3d4ba1-db4d-4345-abe1-41ed6e82079a-home2.jpg",
@@ -771,6 +751,10 @@
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg",
       "PackagePath": "staticwebassets\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\52dd57ff-65bb-4177-afd1-d1eddf8a2525-home4 - Sao chép.jpg",
+      "PackagePath": "staticwebassets\\images\\52dd57ff-65bb-4177-afd1-d1eddf8a2525-home4 - Sao chép.jpg"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\5b60466d-db02-416a-a2d6-b5692192d9f4-nền4.jpg",
@@ -813,6 +797,10 @@
       "PackagePath": "staticwebassets\\images\\8d44fced-cad3-482e-9458-d9b9e51c9c9c-│▌@NIXEU ⊳ illustration _ league of legends _ luxanna _ lux.jpg"
     },
     {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\8e506c21-db07-4f87-a37a-7af149aae736-home2.jpg",
+      "PackagePath": "staticwebassets\\images\\8e506c21-db07-4f87-a37a-7af149aae736-home2.jpg"
+    },
+    {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\920e92d6-90bc-4c0e-8cbc-5f16312f5d8b-home2 - Sao chép.jpg",
       "PackagePath": "staticwebassets\\images\\920e92d6-90bc-4c0e-8cbc-5f16312f5d8b-home2 - Sao chép.jpg"
     },
@@ -823,6 +811,10 @@
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\95c9ff13-4de2-4d3b-9cf2-11cf7d642780-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg",
       "PackagePath": "staticwebassets\\images\\95c9ff13-4de2-4d3b-9cf2-11cf7d642780-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a156f635-65f0-4013-8bfc-a77995c2aaaa-home3.jpg",
+      "PackagePath": "staticwebassets\\images\\a156f635-65f0-4013-8bfc-a77995c2aaaa-home3.jpg"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a777b3fa-e287-4990-a8ad-0bd3b022e103-home1.jpeg",
@@ -891,6 +883,10 @@
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\fae857d9-a9a7-4f24-892f-41e8a348cb9d-home2.jpg",
       "PackagePath": "staticwebassets\\images\\fae857d9-a9a7-4f24-892f-41e8a348cb9d-home2.jpg"
+    },
+    {
+      "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\fb20df66-1996-41ef-a266-ffdfd2cb9377-home1.jpeg",
+      "PackagePath": "staticwebassets\\images\\fb20df66-1996-41ef-a266-ffdfd2cb9377-home1.jpeg"
     },
     {
       "Id": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\fee2b313-48d8-41d7-a10e-313f4969a88d-home3.jpg",
