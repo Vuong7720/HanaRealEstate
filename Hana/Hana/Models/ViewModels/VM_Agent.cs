@@ -29,5 +29,7 @@ namespace Hana.Models.ViewModels
         public bool IsConfirmedNumber { get; set; }
 
         public List<RealEstate>? Posts { get; set; }
+        [Required(ErrorMessage = "LevelId is required.")]
+        public int LevelId { get; set; }
     }
 }

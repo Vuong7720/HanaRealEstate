@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcVmVyaWZ5UGhvbmVOdW1iZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/ChangeRoleLV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XENoYW5nZVJvbGVMVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/Agent/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFnZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -150,10 +154,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/Test.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcVGVzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewAllRealEstates.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJlYWxFc3RhdGVcX3ZpZXdBbGxSZWFsRXN0YXRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAnTotNghiep/Hana/Hana/Hana/Areas/AdminArea/Views/RealEstate/_viewConfirmList.cshtml]

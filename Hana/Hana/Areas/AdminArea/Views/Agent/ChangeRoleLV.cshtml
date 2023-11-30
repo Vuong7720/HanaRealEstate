@@ -1,0 +1,25 @@
+﻿@model Hana.Models.ViewModels.VM_Agent;
+
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-sm-12 b-r">
+        <form asp-action="ChangeRoleLV" asp-route-id="@Model.Id" method="post" onsubmit="return jQueryAjaxPost(this);">
+           
+
+            <div class="form-group">
+                <label asp-for="LevelId">Chức vụ</label>
+                <select asp-for="LevelId" asp-items="ViewBag.Levels" class="form-control">
+                    <option value="">-- Chọn Chức vụ --</option>
+                </select>
+                <span asp-validation-for="LevelId" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input type="submit" value="Lưu" class="btn btn-sm btn-primary float-right m-t-n-xs">
+            </div>
+        </form>
+    </div>
+</div>

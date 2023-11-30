@@ -5,6 +5,7 @@ using Hana.Models.ViewModels;
 using Hana.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -56,6 +57,50 @@ namespace Hana.Areas.AdminArea.Controllers
 
             return View(userInfo);
         }
+        //----------------------------------------
+        [NoDirectAccess]
+        public async Task<IActionResult> ChangeRoleLV(int id)
+        {
+            var agent = await _services.GetDetails(id);
+
+            if (agent == null)
+            {
+                return NotFound();
+            }
+
+            var levels = await _services.GetLevelList();
+            ViewData["Levels"] = new SelectList(levels, "Id", "LevelName", agent.LevelId);
+
+            var vmAgent = new VM_Agent
+            {
+                Id = agent.Id,
+            };
+
+            return View(vmAgent);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeRoleLV(int id, [Bind("Id,LevelId")] Agent updatedAgent)
+        {
+                var success = await _services.UpdateLevel(id, updatedAgent.LevelId);
+
+                if (success)
+                {
+                    TempData["ChangeRoleStatus"] = "Đổi chức vụ thành công!";
+                    return RedirectToAction("Details", new { id });
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Có lỗi xảy ra khi đổi chức vụ.");
+                }
+
+            var agent = await _services.GetListAgent();
+            ViewBag.Levels = new SelectList(await _services.GetLevelList(), "Id", "LevelName");
+
+            return View(agent);
+        }
+
+
 
         [HttpPost]
         [Route("thong-tin-ca-nhan")]

@@ -159,6 +159,36 @@ namespace Hana.Services
             return false;
         }
 
+        public async Task<bool> UpdateLevel(int id, int LevelId)
+        {
+            try
+            {
+                var agent = await _context.Agent.FindAsync(id);
+
+                if (agent != null)
+                {
+                    var newLevel = await _context.Level.FindAsync(LevelId);
+                    if (newLevel == null)
+                    {
+                        return false;
+                    }
+
+                    agent.LevelId = LevelId;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public async Task<IEnumerable<Level>> GetLevelList()
+        {
+            return await _context.Level.ToListAsync();
+        }
     }
 }
 

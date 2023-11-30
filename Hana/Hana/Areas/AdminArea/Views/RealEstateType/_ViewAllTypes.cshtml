@@ -64,7 +64,9 @@
                                     </td>
                                     <td>@item.RealEstateTypeName</td>
                                     <td class="text-center">
-                                        <a title="Chỉnh sửa" onclick="showInPopup('@Url.Action("CreateOrEdit","RealEstateType",new {id=item.Id},Context.Request.Scheme)','Đổi tên')" class="btn btn-blue btn-circle text-white"><i class="fas fa-pen"></i></a>
+                                        <a title="Chỉnh sửa" onclick="showInPopup('@Url.Action("CreateOrEdit","RealEstateType",
+                                        new {id=item.Id},Context.Request.Scheme)','Đổi tên')" 
+                                        class="btn btn-blue btn-circle text-white"><i class="fas fa-pen"></i></a>
 
                                         <form asp-area="AdminArea" asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this);" class="d-inline">
                                             <button class="btn btn-danger btn-circle" title="Xóa" type="submit">

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LKq28AOXI1UhncEwwnAsLZ4hHzpjnaPPLTcRXV7m8Rg=",
+  "Hash": "G1eI39niLsXwlbrZUyPLx2zqES0ppF4F4KTqQHRXUiE=",
   "Source": "Hana",
   "BasePath": "_content/Hana",
   "Mode": "Default",
@@ -3009,6 +3009,23 @@
       "OriginalItemSpec": "wwwroot\\images\\10e5d014-4441-40dc-8b89-8588554b98dc-maxresdefault.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\1c900c32-5b88-4d81-856d-967b705b5f47-home5.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/1c900c32-5b88-4d81-856d-967b705b5f47-home5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1c900c32-5b88-4d81-856d-967b705b5f47-home5.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\1fde7ff4-37a6-4828-a4e6-3fbbe661aef3-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3145,6 +3162,23 @@
       "OriginalItemSpec": "wwwroot\\images\\2d3d4ba1-db4d-4345-abe1-41ed6e82079a-home2.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\30eb4f79-a57e-443c-a07f-710473d871fe-home6.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/30eb4f79-a57e-443c-a07f-710473d871fe-home6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\30eb4f79-a57e-443c-a07f-710473d871fe-home6.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\310ae827-d0f3-479c-bf69-b3d4f770d653-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-38.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3160,6 +3194,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\310ae827-d0f3-479c-bf69-b3d4f770d653-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-38.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\37e20bfc-e19c-4cc9-9deb-c79ed8ba5112-home4.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/37e20bfc-e19c-4cc9-9deb-c79ed8ba5112-home4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\37e20bfc-e19c-4cc9-9deb-c79ed8ba5112-home4.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\39302bb3-1925-4e1a-8395-a9a38a035b7e-league-of-legends-lol-spirit-blossom-yasuo-voi-yone-hinh-nen-1920x1200_6.jpg",
@@ -3213,6 +3264,23 @@
       "OriginalItemSpec": "wwwroot\\images\\426562e7-91dd-4a03-96b9-041c13c8033a-cbc.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\46e272ed-7e74-49d0-97c7-5731ff24d10a-home1.jpeg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/46e272ed-7e74-49d0-97c7-5731ff24d10a-home1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\46e272ed-7e74-49d0-97c7-5731ff24d10a-home1.jpeg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3264,6 +3332,23 @@
       "OriginalItemSpec": "wwwroot\\images\\5b60466d-db02-416a-a2d6-b5692192d9f4-nền4.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\5e63cc2d-1b68-45ac-af18-540f574f45db-home6.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/5e63cc2d-1b68-45ac-af18-540f574f45db-home6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5e63cc2d-1b68-45ac-af18-540f574f45db-home6.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\64d00a01-1c98-43c8-b40e-24e8f213c361-nền7.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3279,6 +3364,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\64d00a01-1c98-43c8-b40e-24e8f213c361-nền7.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\652c9c5c-7983-4730-91ac-f5c2308c3023-home6.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/652c9c5c-7983-4730-91ac-f5c2308c3023-home6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\652c9c5c-7983-4730-91ac-f5c2308c3023-home6.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\6d3748e8-9bac-4021-9ea5-23013e641cf0-game4v-tu-linh-te.jpg",
@@ -3347,6 +3449,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\73290c67-f266-4806-a78f-696e441b3f9e-home2.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\73479baa-a52e-44bc-b6dd-f6ed6962d744-home3.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/73479baa-a52e-44bc-b6dd-f6ed6962d744-home3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\73479baa-a52e-44bc-b6dd-f6ed6962d744-home3.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\74814565-6a57-4cb3-9705-b5234bc58773-088d82b27570fccc9f4366d549390bb7.jpg",
@@ -3434,6 +3553,23 @@
       "OriginalItemSpec": "wwwroot\\images\\8e506c21-db07-4f87-a37a-7af149aae736-home2.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\8e511578-0ef1-4eb9-bdf1-69ac19f10444-home2 - Sao chép.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/8e511578-0ef1-4eb9-bdf1-69ac19f10444-home2 - Sao chép.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8e511578-0ef1-4eb9-bdf1-69ac19f10444-home2 - Sao chép.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\920e92d6-90bc-4c0e-8cbc-5f16312f5d8b-home2 - Sao chép.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3483,6 +3619,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\95c9ff13-4de2-4d3b-9cf2-11cf7d642780-Hình-nền-anime-đẹp-nhất-dành-cho-Laptop-13.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\993ba3fa-6ff5-447c-802b-7c5c928f8faf-home2 - Sao chép.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/993ba3fa-6ff5-447c-802b-7c5c928f8faf-home2 - Sao chép.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\993ba3fa-6ff5-447c-802b-7c5c928f8faf-home2 - Sao chép.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a0c72ac7-1b19-4df5-acee-d7d553e3e34f-home4 - Sao chép.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/a0c72ac7-1b19-4df5-acee-d7d553e3e34f-home4 - Sao chép.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a0c72ac7-1b19-4df5-acee-d7d553e3e34f-home4 - Sao chép.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\a156f635-65f0-4013-8bfc-a77995c2aaaa-home3.jpg",
@@ -3587,6 +3757,23 @@
       "OriginalItemSpec": "wwwroot\\images\\b01bb7c9-0a02-4ae5-a7da-6f45e0cffd52-home1 - Sao chép.jpeg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\b4a87c4e-a90b-4edb-b0e5-908e232b58ee-home2.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/b4a87c4e-a90b-4edb-b0e5-908e232b58ee-home2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b4a87c4e-a90b-4edb-b0e5-908e232b58ee-home2.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\bde994d0-9232-493b-a697-9ed63e83fa5c-home2.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3602,6 +3789,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bde994d0-9232-493b-a697-9ed63e83fa5c-home2.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\be11fdfb-d7d1-4333-983b-aeea121ca117-home3.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/be11fdfb-d7d1-4333-983b-aeea121ca117-home3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\be11fdfb-d7d1-4333-983b-aeea121ca117-home3.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\bfc2c1cc-78e7-404a-bbfb-f7e88e89fb79-home1 - Sao chép.jpeg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/bfc2c1cc-78e7-404a-bbfb-f7e88e89fb79-home1 - Sao chép.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bfc2c1cc-78e7-404a-bbfb-f7e88e89fb79-home1 - Sao chép.jpeg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\c55c7582-d9b7-4500-bd8c-41dc8e753944-home1.jpeg",
@@ -3704,6 +3925,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\d966009a-1b2d-42ae-b7e5-d2e770e18abf-home1.jpeg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\df5bd4dd-274b-4bcf-9deb-3b75da8abf4f-home4.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/df5bd4dd-274b-4bcf-9deb-3b75da8abf4f-home4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\df5bd4dd-274b-4bcf-9deb-3b75da8abf4f-home4.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\e18fdc63-faab-4c95-858d-b5764b254364-home6.jpg",
