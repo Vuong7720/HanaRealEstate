@@ -80,7 +80,7 @@ namespace Hana.Areas.AdminArea.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangeRoleLV(int id, [Bind("Id,LevelId")] Agent updatedAgent)
+        public async Task<IActionResult> ChangeRoleLV(int id,[Bind("Id,LevelId")] Agent updatedAgent)
         {
                 var success = await _services.UpdateLevel(id, updatedAgent.LevelId);
 
