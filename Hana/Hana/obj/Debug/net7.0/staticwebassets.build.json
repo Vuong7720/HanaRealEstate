@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3bJdCsLTeybzomff/bsDvyIkeFT4UwEL8Jo5wEOcIv0=",
+  "Hash": "G1eI39niLsXwlbrZUyPLx2zqES0ppF4F4KTqQHRXUiE=",
   "Source": "Hana",
   "BasePath": "_content/Hana",
   "Mode": "Default",
@@ -3298,23 +3298,6 @@
       "OriginalItemSpec": "wwwroot\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg"
     },
     {
-      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\50b1bc90-377b-4a32-bbb0-cabf018d6264-tải xuống.jpg",
-      "SourceId": "Hana",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
-      "BasePath": "_content/Hana",
-      "RelativePath": "images/50b1bc90-377b-4a32-bbb0-cabf018d6264-tải xuống.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\50b1bc90-377b-4a32-bbb0-cabf018d6264-tải xuống.jpg"
-    },
-    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\52dd57ff-65bb-4177-afd1-d1eddf8a2525-home4 - Sao chép.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3842,23 +3825,6 @@
       "OriginalItemSpec": "wwwroot\\images\\bfc2c1cc-78e7-404a-bbfb-f7e88e89fb79-home1 - Sao chép.jpeg"
     },
     {
-      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\c4e26690-5765-49e3-9e08-42a782a3a34c-lux_oc1-5.jpg",
-      "SourceId": "Hana",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
-      "BasePath": "_content/Hana",
-      "RelativePath": "images/c4e26690-5765-49e3-9e08-42a782a3a34c-lux_oc1-5.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\c4e26690-5765-49e3-9e08-42a782a3a34c-lux_oc1-5.jpg"
-    },
-    {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\c55c7582-d9b7-4500-bd8c-41dc8e753944-home1.jpeg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -3874,23 +3840,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\c55c7582-d9b7-4500-bd8c-41dc8e753944-home1.jpeg"
-    },
-    {
-      "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\c995badc-6007-4ccc-b052-42d4efbbdf72-phong-khach-chung-cu-hinode-city.png",
-      "SourceId": "Hana",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\",
-      "BasePath": "_content/Hana",
-      "RelativePath": "images/c995badc-6007-4ccc-b052-42d4efbbdf72-phong-khach-chung-cu-hinode-city.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\c995badc-6007-4ccc-b052-42d4efbbdf72-phong-khach-chung-cu-hinode-city.png"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\wwwroot\\images\\cf50c6a7-c110-42bb-a66d-4e2487853368-nền6.jpg",
