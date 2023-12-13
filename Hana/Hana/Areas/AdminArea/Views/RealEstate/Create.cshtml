@@ -17,7 +17,7 @@
     }
 }
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvBF7D58HBRSdHN-aoFonm9FLqTnEOkTg&libraries=places&language=vi&callback=initialize">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJAl7Y7RE-KpGxpX58ksDgSowQbjgPQIQ&libraries=places&language=vi&callback=initialize">
 </script>
 
 <div id="real-estate-create" class="wrapper wrapper-content animated fadeInRight">
@@ -305,8 +305,8 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </span>
                                         <input asp-for="Address" id="searchTextField" type="text" class="form-control" />
-                                        <input asp-for="Latitude" type="text" id="placeLat" />
-                                        <input asp-for="Longtitude" type="text" id="placeLng" />
+                                        <input asp-for="Latitude" type="hidden" id="placeLat" />
+                                        <input asp-for="Longtitude" type="hidden" id="placeLng" />
                                     </div>
 
                                     <div id="map" style="height: 500px;"></div>
@@ -463,7 +463,7 @@
         input_val = input_val.replace(".", "");
 
         // Số 1.600
-        input_val = input_val.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        input_val = input_val.replace(/\B(?=(\d{3})+(?!\d))/g, "");
 
         input.val(input_val);
 

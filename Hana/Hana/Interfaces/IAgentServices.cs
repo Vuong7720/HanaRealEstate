@@ -13,5 +13,7 @@ namespace Hana.Interfaces
         bool UpdateProfile(VM_Agent updateProfile);
         int UpdatePassword(VM_ChangePassword data);
         Task<bool> Enable(int id);
+        Task<bool> UpdateLevel(int id, int newLevelId);
+        Task<IEnumerable<Level>> GetLevelList();
     }
 }

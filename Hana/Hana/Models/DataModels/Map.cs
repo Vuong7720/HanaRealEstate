@@ -8,9 +8,9 @@ namespace Hana.Models.DataModels
     {
         public int Id { get; set; }
         public string Address { get; set; }
-        [Column(TypeName = "Decimal(10,0)")]
+        [Column(TypeName = "Decimal(9,7)")]
         public decimal? Latitude { get; set; }
-        [Column(TypeName = "Decimal(10,0)")]
+        [Column(TypeName = "Decimal(10,7)")]
         public decimal? Longtitude { get; set; }
         public int? WardId { get; set; }
         public int? DistrictId { get; set; }
