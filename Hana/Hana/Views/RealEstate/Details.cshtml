@@ -51,7 +51,7 @@
         <div class="row pd-top-40">
             <div class="col-lg-9">
                 <div class="property-info mb-5">
-                    <div class="h4 text-danger">
+                    <div class="h4 text-info">
                         @Model.Title
                     </div>
                     <div class="h6 font-italic">@realEstateType</div>
@@ -74,7 +74,7 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="single-property-info">
                                 <div class="h5">Giá phòng</div>
-                                <p class="text-danger">
+                                <p class="text-info">
                                     <i class="fa fa-usd"></i>
                                     @Helper.VNCurrencyFormat(Model.Price.ToString())Đ/tháng
                                 </p>
@@ -83,7 +83,7 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="single-property-info">
                                 <div class="h5">Diện tích</div>
-                                <p class="text-danger">
+                                <p class="text-info">
                                     <img src="~/assets/img/icons/7.png" alt="img">
                                     @Model.Acreage m<sub style="vertical-align:super">2</sub>
                                 </p>
@@ -262,7 +262,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="widget mt-3 pl-3">
-                    <div class="text-danger h6 pt-3">Xem theo loại phòng</div>
+                    <div class="text-info h6 pt-3">Xem theo loại phòng</div>
                     <ul class="ml-2">
                         @foreach (var realstateType in ((IEnumerable<RealEstateType>)ViewData["RealEstateList"]).Take(10))
                         {
@@ -272,7 +272,7 @@
                     </ul>
                 </div>
                 <div class="widget mt-3 pl-3">
-                    <div class="text-danger h6 pt-3">Xem theo quận/huyện</div>
+                    <div class="text-info h6 pt-3">Xem theo quận/huyện</div>
                     <ul class="ml-2">
                         @foreach (var district in ((IEnumerable<District>)ViewData["DistrictList"]).Take(10))
                         {

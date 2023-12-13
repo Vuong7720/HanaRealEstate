@@ -305,8 +305,8 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </span>
                                         <input asp-for="Address" id="searchTextField" type="text" class="form-control" />
-                                        <input asp-for="Latitude" type="text" id="placeLat" />
-                                        <input asp-for="Longtitude" type="text" id="placeLng" />
+                                        <input asp-for="Latitude" type="hidden" id="placeLat" />
+                                        <input asp-for="Longtitude" type="hidden" id="placeLng" />
                                     </div>
 
                                     <div id="map" style="height: 500px;"></div>
