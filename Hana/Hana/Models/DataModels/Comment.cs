@@ -12,6 +12,7 @@ namespace Hana.Models.DataModels
         [ForeignKey("RealEstate")]
         public int? RealEstateId { get; set; }
         public string? AgentName { get; set; }
+        public int? ParentCommentId { get; set; }
         public string? Content { get; set; }
         public  DateTime Ngaytao { get; set; }
         public virtual Agent? Agent { get; set; }

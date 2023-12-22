@@ -193,6 +193,10 @@ namespace Hana.Services
         {
             return await _context.Level.ToListAsync();
         }
+        public IEnumerable<RealEstate> GetRealEstatesByAgent(int agentId)
+        {
+            return _context.RealEstate.Where(r => r.AgentId == agentId).ToList();
+        }
     }
 }
 

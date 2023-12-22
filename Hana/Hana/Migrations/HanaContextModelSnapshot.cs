@@ -153,6 +153,9 @@ namespace Hana.Migrations
                     b.Property<DateTime>("Ngaytao")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ParentCommentId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("RealEstateId")
                         .HasColumnType("int");
 

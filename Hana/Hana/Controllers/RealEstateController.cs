@@ -41,31 +41,36 @@ namespace Hana.Controllers
         [Authorize(Roles = "Admin,Manager,Customer")]
         public async Task<IActionResult> AddComment(Comment comment)
         {
-            if (ModelState.IsValid)
+            if (comment == null)
             {
-                var userId = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
-                Debug.WriteLine($"AgentId: {userId}");
-                if (!string.IsNullOrEmpty(userId))
-                {
-                    comment.AgentId = int.Parse(userId);
-                    var agent = _agentService.GetUserInfo(int.Parse(userId));
-
-                    if (agent != null)
-                    {
-                        comment.AgentName = agent.Name;
-                    }
-                    comment.Content = comment.Content;
-                    comment.Ngaytao = DateTime.Now;
-                    await _commentService.AddComment(comment);
-                }
-                else
-                {
-                    ViewBag.ErrorMessage = "Có lỗi xảy ra, vui lòng thử lại";
-                    return RedirectToAction("Details", new { id = comment.RealEstateId });
-                }
+                // Xử lý khi comment là null
+                return BadRequest("Comment cannot be null");
             }
 
-            // Redirect hoặc trả về JSON phản hồi
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+            Debug.WriteLine($"AgentId: {userId}");
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                ViewBag.ErrorMessage = "Có lỗi xảy ra, vui lòng thử lại";
+                return RedirectToAction("Details", new { id = comment?.RealEstateId });
+            }
+
+            var agent = _agentService.GetUserInfo(int.Parse(userId));
+
+            if (agent == null)
+            {
+                ViewBag.ErrorMessage = "Có lỗi xảy ra, vui lòng thử lại";
+                return RedirectToAction("Details", new { id = comment.RealEstateId });
+            }
+
+            comment.AgentId = int.Parse(userId);
+            comment.AgentName = agent.Name;
+            comment.Content = comment.Content;
+            comment.Ngaytao = DateTime.Now;
+
+            await _commentService.AddComment(comment);
+
             return RedirectToAction("Details", new { id = comment.RealEstateId });
         }
 
@@ -84,6 +89,46 @@ namespace Hana.Controllers
             }
             return Json(comments);
         }
+
+        [HttpPost]
+        [HttpPost]
+        public async Task<IActionResult> AddReply(int parentId, string content)
+        {
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return BadRequest("UserId is required");
+            }
+
+            var parentComment = _commentService.GetCommentsForRealEstate(parentId)
+                .FirstOrDefault(c => c.Id == parentId);
+
+            if (parentComment == null)
+            {
+                return NotFound($"Parent comment with id {parentId} not found");
+            }
+
+            var reply = new Comment
+            {
+                ParentCommentId = parentComment.Id,
+                Content = content,
+                // ... thiết lập các thuộc tính khác của bình luận trả lời ...
+            };
+
+            await _commentService.AddReply(reply);
+            return RedirectToAction("Details", new { id = parentComment.RealEstateId });
+        }
+        [HttpGet]
+        public IActionResult GetReplies(int parentCommentId)
+        {
+            var replies = _commentService.GetRepliesForComment(parentCommentId);
+            return Json(replies);
+        }
+
+
+
+
 
 
         [HttpGet]
@@ -190,6 +235,8 @@ namespace Hana.Controllers
             return Json(new { data });
         }
 
+
         
+
     }
 }

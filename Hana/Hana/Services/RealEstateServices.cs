@@ -776,19 +776,48 @@ namespace Hana.Services
         public IEnumerable<MonthlyPostStats> GetMonthlyPostingsData()
         {
             var monthlyDataFromDb = _context.RealEstate
-            .Where(r => r.ExprireTime > DateTime.Now)
-            .GroupBy(r => r.PostTime.Month)
-            .Select(group => new MonthlyPostStats
+                .GroupBy(r => new { r.PostTime.Month, r.PostTime.Year })
+                .Select(group => new MonthlyPostStats
+                {
+                    Month = group.Key.Month,
+                    Year = group.Key.Year,
+                    PostCount = group.Count()
+                })
+                .OrderBy(stats => stats.Year)
+                .ThenBy(stats => stats.Month)
+                .ToList();
+
+            foreach (var item in monthlyDataFromDb)
             {
-                Month = group.Key,
-                PostCount = group.Count()
-            })
-            .OrderBy(stats => stats.Month)
-            .ToList();
+                Console.WriteLine($"Year: {item.Year}, Month: {item.Month}, PostCount: {item.PostCount}");
+            }
 
             return monthlyDataFromDb;
-
         }
+
+        public IEnumerable<MonthlyPostStats> GetMonthlyPostingsById(int agentId)
+        {
+            var monthlyDataFromDb = _context.RealEstate
+                .Where(r => r.AgentId == agentId)
+                .GroupBy(r => new { r.PostTime.Month, r.PostTime.Year })
+                .Select(group => new MonthlyPostStats
+                {
+                    Month = group.Key.Month,
+                    Year = group.Key.Year,
+                    PostCount = group.Count()
+                })
+                .OrderBy(stats => stats.Year)
+                .ThenBy(stats => stats.Month)
+                .ToList();
+
+            foreach (var item in monthlyDataFromDb)
+            {
+                Console.WriteLine($"Year: {item.Year}, Month: {item.Month}, PostCount: {item.PostCount}");
+            }
+
+            return monthlyDataFromDb;
+        }
+
 
 
     }

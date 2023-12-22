@@ -6,9 +6,11 @@ using Hana.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Hana.Areas.AdminArea.Controllers
 {
@@ -197,10 +199,19 @@ namespace Hana.Areas.AdminArea.Controllers
         }
 
         [HttpGet]
-        public IActionResult MonthlyPostingsChart()
+        public IActionResult MonthlyPostingsChart(int agentId)
         {
-            var monthlyDataFromDb = _realEstateServices.GetMonthlyPostingsData();
+            var monthlyDataFromDb = _realEstateServices.GetMonthlyPostingsById(agentId);
             return Json(monthlyDataFromDb);
+        }
+        [HttpGet]
+        public IActionResult GetRealEstatesByAgentId(int agentId)
+        {
+            // Gọi phương thức trong service để lấy danh sách bài đăng theo agentId
+            var realEstates = _services.GetRealEstatesByAgent(agentId);
+
+            // Trả về danh sách bài đăng dưới dạng JSON
+            return Json(realEstates);
         }
     }
 }

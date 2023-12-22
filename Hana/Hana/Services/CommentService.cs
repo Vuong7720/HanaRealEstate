@@ -17,10 +17,10 @@ namespace Hana.Services
         {
             var newComment = new Comment
             {
-                AgentId = comment.AgentId, // Đảm bảo set AgentId nếu cần
-                RealEstateId = comment.RealEstateId, // Đảm bảo set RealEstateId
+                AgentId = comment.AgentId, 
+                RealEstateId = comment.RealEstateId, 
                 Content = comment.Content,
-                Ngaytao = comment.Ngaytao // Đảm bảo set Ngaytao theo CreatedAt của CommentModel
+                Ngaytao = comment.Ngaytao 
             };
 
             _context.Comment.Add(newComment);
@@ -43,6 +43,20 @@ namespace Hana.Services
        .ToList();
 
             return comments;
+        }
+        public async Task AddReply(Comment reply)
+        {
+            _context.Comment.Add(reply);
+            await _context.SaveChangesAsync();
+        }
+        public List<Comment> GetRepliesForComment(int parentCommentId)
+        {
+            var replies = _context.Comment
+                .Where(c => c.ParentCommentId == parentCommentId)
+                .OrderBy(c => c.Ngaytao)
+                .ToList();
+
+            return replies;
         }
     }
 }

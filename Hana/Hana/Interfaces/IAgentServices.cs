@@ -16,5 +16,6 @@ namespace Hana.Interfaces
         Task<bool> UpdateLevel(int id, int newLevelId);
         Task<IEnumerable<Level>> GetLevelList();
         Task<string?> GetAgentNameById(int agentId);
+        IEnumerable<RealEstate> GetRealEstatesByAgent(int agentId);
     }
 }

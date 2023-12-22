@@ -2,6 +2,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment"></script>
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row m-b-lg m-t-lg">
         <div class="col-md-3">
@@ -162,41 +163,227 @@
         </div>
 
         @* ------------------- *@
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="tab-pane fade mt-2" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div>
+                <label for="viewTypeDropdown">Chọn kiểu xem:</label>
+                <select id="viewTypeDropdown">
+                    <option value="month">Theo Tháng</option>
+                    <option value="day">Theo Ngày</option>
+                </select>
+            </div>
+            <div>
+                <label for="monthYearDropdown">Chọn Tháng/Năm:</label>
+                <select id="monthYearDropdown"></select>
+            </div>
+            <button id="viewAllMonthsBtn" class="btn btn-info">Xem tất cả</button>
+            <button id="viewAllDaysBtn" class="btn btn-info">Xem tất cả (Ngày)</button>
             <canvas id="monthlyPostingsChart" width="600" height="200"></canvas>
+            <canvas id="dailyPostingsChart" width="600" height="200"></canvas>
+
         </div>
        
     </div>
 </div>
 <script>
-    fetch('/AdminArea/Agent/MonthlyPostingsChart')
-        .then(response => response.json())
-        .then(data => {
-            const months = data.map(entry => entry.month);
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentUrl = window.location.href;
+    const pathParts = currentUrl.split('/');
+    const agentId = pathParts[pathParts.length - 1];
+    let myChart;
 
-            const postings = data.map(entry => entry.postCount);
+    if (agentId) {
+        console.log('Agent ID:', agentId);
 
-            const ctx = document.getElementById('monthlyPostingsChart').getContext('2d');
+        fetch(`/AdminArea/Agent/GetRealEstatesByAgentId?agentId=${agentId}`)
+            .then(response => response.json())
+            .then(data => {
+                const monthlyData = {};
 
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: months,
-                    datasets: [{
-                        label: 'Số lượng bài đăng',
-                        data: postings,
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+                data.forEach(entry => {
+                    const postTime = moment(entry.postTime);
+                    const monthYearKey = postTime.format("MM/YYYY");
+
+                    if (!monthlyData[monthYearKey]) {
+                        monthlyData[monthYearKey] = 0;
+                    }
+                    monthlyData[monthYearKey]++;
+                });
+
+                const monthsYear = Object.keys(monthlyData);
+                const postings = Object.values(monthlyData);
+
+            
+                const dropdown = $('#monthYearDropdown');
+                monthsYear.forEach(monthYear => {
+                    dropdown.append(`<option value="${monthYear}">${monthYear}</option>`);
+                });
+
+                // Xử lý sự kiện khi giá trị dropdown thay đổi
+                dropdown.change(() => {
+                    const selectedMonthYear = dropdown.val();
+                    const selectedPostings = monthlyData[selectedMonthYear] || 0;
+
+                    // Cập nhật biểu đồ khi người dùng chọn giá trị mới
+                    updateChart(selectedMonthYear, selectedPostings);
+                });
+
+                // Hiển thị biểu đồ mặc định với giá trị đầu tiên trong dropdown
+                const defaultMonthYear = monthsYear[0];
+                const defaultPostings = monthlyData[defaultMonthYear] || 0;
+                updateChart(defaultMonthYear, defaultPostings);
+            });
+    } else {
+        console.error('Agent ID not found in the URL.');
+    }
+
+    function updateChart(monthYear, postCount) {
+        const ctx = document.getElementById('monthlyPostingsChart').getContext('2d');
+        if (myChart) {
+            myChart.destroy();
+        }
+
+        myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [monthYear],
+                datasets: [{
+                    label: 'Số lượng bài đăng',
+                    data: [postCount],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
+            }
         });
+    }
+
+    document.getElementById('viewAllMonthsBtn').addEventListener('click', function () {
+        fetch(`/AdminArea/Agent/GetRealEstatesByAgentId?agentId=${agentId}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                const monthsData = {};
+
+                data.forEach(entry => {
+                    const postTime = moment(entry.postTime);
+                    const monthYearKey = postTime.format("MM/YYYY");
+
+                    if (!monthsData[monthYearKey]) {
+                        monthsData[monthYearKey] = 0;
+                    }
+                    monthsData[monthYearKey]++;
+                });
+
+
+                const months = Object.keys(monthsData);
+                const postings = Object.values(monthsData);
+
+                const ctx = document.getElementById('monthlyPostingsChart').getContext('2d');
+
+                // Hủy bỏ biểu đồ hiện tại nếu có
+                if (myChart) {
+                    myChart.destroy();
+                }
+
+                // Tạo biểu đồ với nhiều cột tương ứng với số lượng tháng
+                myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: months.map(month => "Tháng " + month),
+                        datasets: [{
+                            label: 'Số lượng bài đăng',
+                            data: postings,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+    });
+
 </script>
+
+<script>
+    const viewTypeDropdown = $('#viewTypeDropdown');
+    const dailyBtn = $('#viewAllDaysBtn');
+    const monthlyBtn = $('#viewAllMonthsBtn');
+
+    viewTypeDropdown.change(() => {
+        const selectedViewType = viewTypeDropdown.val();
+
+        if (selectedViewType === 'month') {
+            dailyBtn.hide();
+            monthlyBtn.show();
+        } else {
+            dailyBtn.show();
+            monthlyBtn.hide();
+        }
+
+        updateChartBasedOnViewType(selectedViewType);
+    });
+
+    dailyBtn.click(() => {
+        fetch(`/AdminArea/Agent/GetRealEstatesByAgentId?agentId=${agentId}`)
+            .then(response => response.json())
+            .then(data => {
+                const daysData = {};
+
+                data.forEach(entry => {
+                    const postTime = moment(entry.postTime);
+                    const dayKey = postTime.format("DD/MM/YYYY");
+
+                    if (!daysData[dayKey]) {
+                        daysData[dayKey] = 0;
+                    }
+                    daysData[dayKey]++;
+                });
+
+                const days = Object.keys(daysData);
+                const postings = Object.values(daysData);
+
+                const ctx = document.getElementById('dailyPostingsChart').getContext('2d');
+
+                if (myChart) {
+                    myChart.destroy();
+                }
+
+                myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: days.map(day => "Ngày " + day),
+                        datasets: [{
+                            label: 'Số lượng bài đăng',
+                            data: postings,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+    });
+
+</script>
+                           

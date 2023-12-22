@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7osiLifL1SjX3zctFpenLHsLcVoXNAIEovo+NMgwxEA=",
+  "Hash": "ZDwxCTzP4g9laMNqs1CkOyPa/7PyXc5Qea26Wn7SgE0=",
   "Source": "Hana",
   "BasePath": "_content/Hana",
   "Mode": "Default",
@@ -3519,6 +3519,23 @@
       "OriginalItemSpec": "wwwroot\\images\\46e272ed-7e74-49d0-97c7-5731ff24d10a-home1.jpeg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\4d0a29ef-f8d9-4741-9b39-7893452a7516-5.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/4d0a29ef-f8d9-4741-9b39-7893452a7516-5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4d0a29ef-f8d9-4741-9b39-7893452a7516-5.jpg"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\4d6b05c2-0b7d-4373-b03d-81bb30fdf64d-home2.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -4114,6 +4131,23 @@
       "OriginalItemSpec": "wwwroot\\images\\a156f635-65f0-4013-8bfc-a77995c2aaaa-home3.jpg"
     },
     {
+      "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\a3376dca-96e8-40a8-aba2-043e455dbb5c-4.png",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/a3376dca-96e8-40a8-aba2-043e455dbb5c-4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a3376dca-96e8-40a8-aba2-043e455dbb5c-4.png"
+    },
+    {
       "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\a3704aae-70eb-4e80-8b34-dea627cd7ae9-7.jpg",
       "SourceId": "Hana",
       "SourceType": "Discovered",
@@ -4146,6 +4180,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a43d940c-e51d-4219-88e1-a56da3ed90fc-3.jpg"
+    },
+    {
+      "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\a4d053af-ba45-4804-9e9f-fd479e82b3c4-3.jpg",
+      "SourceId": "Hana",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\",
+      "BasePath": "_content/Hana",
+      "RelativePath": "images/a4d053af-ba45-4804-9e9f-fd479e82b3c4-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a4d053af-ba45-4804-9e9f-fd479e82b3c4-3.jpg"
     },
     {
       "Identity": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\wwwroot\\images\\a777b3fa-e287-4990-a8ad-0bd3b022e103-home1.jpeg",

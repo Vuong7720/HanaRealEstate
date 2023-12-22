@@ -39,6 +39,7 @@ namespace Hana.Interfaces
         List<Result> GetRecommendList(int? id);
         List<District> GetDistrictList();
         IEnumerable<MonthlyPostStats> GetMonthlyPostingsData();
+        IEnumerable<MonthlyPostStats> GetMonthlyPostingsById(int id);
 
     }
 }
