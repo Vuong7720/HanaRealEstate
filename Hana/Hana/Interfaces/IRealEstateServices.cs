@@ -38,5 +38,7 @@ namespace Hana.Interfaces
         Tuple<int?, int?, int> GetLocation(string address);
         List<Result> GetRecommendList(int? id);
         List<District> GetDistrictList();
+        IEnumerable<MonthlyPostStats> GetMonthlyPostingsData();
+
     }
 }

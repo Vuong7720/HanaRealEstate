@@ -2,6 +2,8 @@
     <script src="~/js/mustache.min.js"></script>
     <script src="~/js/pagination.min.js"></script>
     <script src="~/admin/js/services/realEstateServices.js"></script>
+    
+
 }
 
 @{
@@ -15,7 +17,7 @@
         max-width: 30ch;
     }
 </style> 
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div class="row">
     <div class="col-6 mt-2 pb-3">
@@ -96,3 +98,37 @@
         </td>
     </tr>
 </script>
+
+<canvas id="monthlyPostingsChart" width="600" height="200"></canvas>
+<script>
+    fetch('/AdminArea/RealEstate/MonthlyPostingsChart')
+    .then(response => response.json())
+    .then(data => {
+        const months = data.map(entry => entry.month);
+
+            const postings = data.map(entry => entry.postCount);
+
+        const ctx = document.getElementById('monthlyPostingsChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: months,
+                datasets: [{
+                    label: 'Số lượng bài đăng',
+                    data: postings,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+    </script>

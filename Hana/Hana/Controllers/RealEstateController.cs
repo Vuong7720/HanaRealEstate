@@ -7,7 +7,11 @@ using Hana.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Hana.Controllers
@@ -17,21 +21,76 @@ namespace Hana.Controllers
         private readonly IRealEstateServices _realEstateServices;
         private readonly IFileServices _fileServices;
         private readonly ICommonServices _commonServices;
-
+        private readonly ICommentService _commentService;
+        private readonly IAgentServices _agentService;
         public RealEstateController(IRealEstateServices realEstateServices,
                                     IFileServices fileServices,
-                                    ICommonServices commonServices)
+                                    ICommonServices commonServices,
+                                    ICommentService commentService,
+                                    IAgentServices agentServices)
         {
             _realEstateServices = realEstateServices;
             _fileServices = fileServices;
             _commonServices = commonServices;
+            _commentService = commentService;
+            _agentService = agentServices;
+
         }
+        [HttpPost]
+        [AllowAnonymous]
+        [Authorize(Roles = "Admin,Manager,Customer")]
+        public async Task<IActionResult> AddComment(Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                var userId = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+                Debug.WriteLine($"AgentId: {userId}");
+                if (!string.IsNullOrEmpty(userId))
+                {
+                    comment.AgentId = int.Parse(userId);
+                    var agent = _agentService.GetUserInfo(int.Parse(userId));
+
+                    if (agent != null)
+                    {
+                        comment.AgentName = agent.Name;
+                    }
+                    comment.Content = comment.Content;
+                    comment.Ngaytao = DateTime.Now;
+                    await _commentService.AddComment(comment);
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Có lỗi xảy ra, vui lòng thử lại";
+                    return RedirectToAction("Details", new { id = comment.RealEstateId });
+                }
+            }
+
+            // Redirect hoặc trả về JSON phản hồi
+            return RedirectToAction("Details", new { id = comment.RealEstateId });
+        }
+
+        [AllowAnonymous]
+        public JsonResult GetComments(int realEstateId)
+        {
+            var comments = _commentService.GetCommentsForRealEstate(realEstateId);
+            foreach (var comment in comments)
+            {
+                if (comment.AgentId.HasValue)
+                {
+                    var agentName = _agentService.GetAgentNameById(comment.AgentId.Value).Result;
+
+                    comment.AgentName = agentName;
+                }
+            }
+            return Json(comments);
+        }
+
 
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Index(int? page, int? type, int? city, int? district, int? priceRange, int? acreageRange, string? searchString)
         {
-            int pageSize = 5;
+            int pageSize = 6;
 
             var condition = new Condition
             {

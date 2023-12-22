@@ -102,12 +102,6 @@ namespace Hana.Services
             return uploadedFiles;
         }
 
-        /// <summary>
-        /// not use
-        /// </summary>
-        /// <param name="files"></param>
-        /// <param name="realEstateId"></param>
-        /// <returns></returns>
         public List<Picture> GetImageFromFiles(List<IFormFile> files, int realEstateId)
         {
             string wwwPath = this._enviroment.WebRootPath;

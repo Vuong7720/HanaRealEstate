@@ -45,7 +45,9 @@ builder.Services.AddScoped<IRealEstateTypeServices, RealEstateTypeServices>();
 builder.Services.AddScoped<IAgentServices, AgentServices>();
 builder.Services.AddScoped<ICommonServices, CommonServices>();
 builder.Services.AddScoped<IVerification, Verification>();
+builder.Services.AddScoped<ICommentService, CommentService>();
 
+builder.Services.AddSignalR();
 builder.Services.AddLiveReload();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddMvc().AddRazorRuntimeCompilation();
@@ -78,6 +80,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "AdminArea",

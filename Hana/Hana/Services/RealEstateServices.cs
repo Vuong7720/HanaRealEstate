@@ -54,18 +54,6 @@ namespace Hana.Services
                             .ThenByDescending(r => r.IsAvaiable)
                             .ThenByDescending(r => r.ExprireTime)
                             .AsQueryable();
-
-            //if (!string.IsNullOrEmpty(searchKey))
-            //{
-            //    source = source.Where(s => s.Map.Address.Contains(searchKey)
-            //                             || s.Agent.AgentName.Contains(searchKey)
-            //                             || s.ReaEstateType.RealEstateTypeName.Contains(searchKey)
-            //                             || EF.Functions.Contains(s.PostTime.ToString("dd/MM/yyyy"), searchKey)
-            //                             || EF.Functions.Contains(s.ExprireTime.Value.ToString("dd/MM/yyyy"), searchKey)
-            //                             || EF.Functions.Contains(s.RealEstateDetail.Price.ToString(), searchKey)
-            //                          );
-            //}
-
             IQueryable<RealEstateViewModel> results = (from item in source
                                                        select new RealEstateViewModel
                                                        {
@@ -600,7 +588,10 @@ namespace Hana.Services
 
                 var source = _context.RealEstate
                     .Where(r => r.IsActive && r.ConfirmStatus == 1);
-
+                if(condition.SearchString is not null)
+                {
+                    source = source.Where(c => c.Map.Address.Contains(condition.SearchString));
+                }
                 if (condition.City > 0)
                 {
                     source = source.Where(c => c.Map.CityId == condition.City);
@@ -782,8 +773,24 @@ namespace Hana.Services
         {
             return _context.District.ToList();
         }
+        public IEnumerable<MonthlyPostStats> GetMonthlyPostingsData()
+        {
+            var monthlyDataFromDb = _context.RealEstate
+            .Where(r => r.ExprireTime > DateTime.Now)
+            .GroupBy(r => r.PostTime.Month)
+            .Select(group => new MonthlyPostStats
+            {
+                Month = group.Key,
+                PostCount = group.Count()
+            })
+            .OrderBy(stats => stats.Month)
+            .ToList();
 
-       
+            return monthlyDataFromDb;
+
+        }
+
+
     }
 
 }

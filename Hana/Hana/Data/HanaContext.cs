@@ -31,15 +31,7 @@ namespace Hana.Data
         public virtual DbSet<RealEstateType> RealEstateType { get; set; }
         public virtual DbSet<SocialLogin> SocialLogin { get; set; }
         public virtual DbSet<Ward> Ward { get; set; }
-
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Server=.;Database=Hana;User Id=sa;Password=123;Trusted_Connection=True;");
-//            }
-//        }
+        public virtual DbSet<Comment> Comment { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,6 +40,15 @@ namespace Hana.Data
                 entity.ToTable("ABOUT_US");
 
                 entity.Property(e => e.Content).HasColumnType("ntext");
+            });
+            modelBuilder.Entity<Comment>(entity =>
+            {
+                entity.ToTable("Comment");
+                entity.Property(e => e.Content).HasColumnType("ntext");
+                entity.HasOne(c => c.RealEstate)
+          .WithMany(re => re.Comments)
+          .HasForeignKey(c => c.RealEstateId)
+          .OnDelete(DeleteBehavior.NoAction);
             });
 
             modelBuilder.Entity<Agent>(entity =>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\Hana.csproj": {}
+    "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\Hana.csproj": {}
   },
   "projects": {
-    "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\Hana.csproj": {
+    "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\Hana.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\Hana.csproj",
+        "projectUniqueName": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\Hana.csproj",
         "projectName": "Hana",
-        "projectPath": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\Hana.csproj",
+        "projectPath": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\Hana.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\DoAnTotNghiep\\Hana\\Hana\\Hana\\obj\\",
+        "outputPath": "D:\\DoAnTotNghiep\\DoAnTotNghiep_2023_1921050703_PhamQuocVuong\\Hana\\Hana\\Hana\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

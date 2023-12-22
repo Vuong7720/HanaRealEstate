@@ -218,7 +218,6 @@ namespace Hana.Helpers
 
         public static string GetStatus(RealEstate realEstate)
         {
-            //neu rt chua di disable => kiem tra het han hay chua
             if (realEstate.IsActive)
             {
                 if (!realEstate.IsConfirm)
@@ -237,10 +236,8 @@ namespace Hana.Helpers
                         return realEstate.PostTime.AddDays(30) < DateTime.Now ? "Hết hạn" : "Còn phòng";
                     }
 
-                    //truong hop co ngay het han
                     else
                     {
-                        //neu ngay het han < ngay hien tai thi het han
                         return realEstate.ExprireTime < DateTime.Now ? "Hết hạn" : "Còn phòng";
                     }
                 }

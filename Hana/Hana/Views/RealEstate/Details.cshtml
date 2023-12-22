@@ -4,9 +4,25 @@
 
 @section scripts{
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJAl7Y7RE-KpGxpX58ksDgSowQbjgPQIQ&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyMaLWhvfR7Zwx1iK1ut8X4x9xYe4GAGI&callback=initMap">
     </script>
 }
+<style>
+    #commentSection {
+        max-height: 300px; /* Thiết lập chiều cao tối đa */
+        overflow-y: auto; /* Sử dụng thanh cuộn khi nội dung vượt quá chiều cao */
+    }
+
+    /* Ẩn nút "Xem thêm" khi không cần thiết */
+    #loadMoreBtn {
+        display: none;
+    }
+
+    /* Thêm CSS cho phần hiển thị bình luận khi có thanh cuộn */
+    .overflow-container {
+        overflow-y: auto;
+    }
+</style>
 
 @{
     ViewData["Title"] = "Thông tin chi tiết";
@@ -299,6 +315,90 @@
     </div>
 </div>
 <!-- Recommended area end -->
+<div class="container">
+    <div class="property-news-single-card style-two border-bottom-yellow">
+        <div class="content-title mb-3 h4">Bình luận</div>
+
+        <div id="commentSection" class="list-group overflow-container">
+            <!-- Bình luận sẽ được hiển thị -->
+        </div>
+
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="commentContent">Nội dung bình luận:</label>
+                <textarea class="form-control" id="commentContent" name="content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Thêm Bình Luận</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <button id="loadMoreBtn" class="btn btn-secondary">Xem thêm</button>
+        </div>
+    </div>
+</div>
+
+<!-- Thêm sau đoạn mã script hiện tại -->
+<script>
+    // Xử lý khi form bình luận được submit
+    $("#commentForm").submit(function (e) {
+        e.preventDefault();
+        var content = $("#commentContent").val();
+
+        // Gửi dữ liệu lên server sử dụng Ajax
+        $.ajax({
+            type: "POST",
+            url: "/RealEstate/AddComment",
+            data: {agentId:@Model.AgentId, content: content, realEstateId: @Model.Id },
+            success: function () {
+                // Sau khi thêm bình luận thành công, làm mới danh sách bình luận
+                loadComments();
+            },
+            error: function (error) {
+                console.error("Error adding comment: ", error);
+            }
+        });
+    });
+
+    // Hàm để tải danh sách bình luận
+    function loadComments() {
+        $.ajax({
+            type: "GET",
+            url: "/RealEstate/GetComments",
+            data: { realEstateId: @Model.Id },
+            success: function (data) {
+                // Hiển thị danh sách bình luận
+                displayComments(data);
+            },
+            error: function (error) {
+                console.error("Error loading comments: ", error);
+            }
+        });
+    }
+
+    // Hàm để hiển thị danh sách bình luận
+    function displayComments(comments) {
+        var commentSection = $("#commentSection");
+        commentSection.empty();
+
+        comments.forEach(function (comment) {
+            var commentHtml = `
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">${comment.agentName}</h5>
+                            <small>${comment.Ngaytao}</small>
+                        </div>
+                        <p class="mb-1">${comment.content}</p>
+                    </div>`;
+
+            commentSection.append(commentHtml);
+        });
+    }
+
+    // Gọi hàm loadComments khi trang được tải
+    $(document).ready(function () {
+        loadComments();
+    });
+</script>
 
 <script>
     // Initialize and add the map

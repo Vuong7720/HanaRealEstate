@@ -145,7 +145,6 @@ namespace Hana.Areas.AdminArea.Controllers
                 {
                     var realEstateId = _realEstateServices.AddCompleteRealEstate(details, Convert.ToInt32(userId));
 
-                    //tao real estate thanh cong
                     if (realEstateId != -1)
                     {
                         if (details.Files != null && details.Files.Count > 0)
@@ -160,7 +159,6 @@ namespace Hana.Areas.AdminArea.Controllers
                             uploadedFilesCount = _fileServices.AddPicture(realEstateId, pictureFiles);
                         }
 
-                        //use tempdate pass message to index controller
                         TempData["Message"] = string.Format("Thêm phòng trọ thành công, uploaded {0} hình ảnh", uploadedFilesCount);
                         TempData["MesageType"] = 1;
                         return RedirectToAction(nameof(ClientRealEstateList));
@@ -372,6 +370,14 @@ namespace Hana.Areas.AdminArea.Controllers
             {
                 return Json(new { isSuccess = false, message = "Lỗi hệ thống: " + ex.Message });
             }
+        }
+
+        // Ví dụ về action để lấy dữ liệu bài đăng theo tháng
+        [HttpGet]
+        public IActionResult MonthlyPostingsChart()
+        {
+            var monthlyDataFromDb = _realEstateServices.GetMonthlyPostingsData();
+            return Json(monthlyDataFromDb);
         }
 
     }

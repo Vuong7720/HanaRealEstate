@@ -31,5 +31,6 @@ namespace Hana.Models.DataModels
         public virtual RealEstateDetail RealEstateDetail { get; set; }
         public virtual ICollection<Picture> Picture { get; set; }
         public virtual ICollection<Rating> Rating { get; set; }
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

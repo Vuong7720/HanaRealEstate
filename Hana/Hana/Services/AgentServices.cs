@@ -32,7 +32,11 @@ namespace Hana.Services
             }
             else return false;
         }
-
+        public async Task<string?> GetAgentNameById(int agentId)
+        {
+            var agentInfo = GetUserInfo(agentId);
+            return agentInfo?.Name;
+        }
         public async Task<VM_Agent> GetDetails(int id)
         {
             var agent = await _context.Agent.FindAsync(id);

@@ -133,6 +133,38 @@ namespace Hana.Migrations
                     b.ToTable("CITY", (string)null);
                 });
 
+            modelBuilder.Entity("Hana.Models.DataModels.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AgentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AgentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("ntext");
+
+                    b.Property<DateTime>("Ngaytao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("RealEstateId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AgentId");
+
+                    b.HasIndex("RealEstateId");
+
+                    b.ToTable("Comment", (string)null);
+                });
+
             modelBuilder.Entity("Hana.Models.DataModels.District", b =>
                 {
                     b.Property<int>("Id")
@@ -507,6 +539,22 @@ namespace Hana.Migrations
                     b.Navigation("Level");
                 });
 
+            modelBuilder.Entity("Hana.Models.DataModels.Comment", b =>
+                {
+                    b.HasOne("Hana.Models.DataModels.Agent", "Agent")
+                        .WithMany()
+                        .HasForeignKey("AgentId");
+
+                    b.HasOne("Hana.Models.DataModels.RealEstate", "RealEstate")
+                        .WithMany("Comments")
+                        .HasForeignKey("RealEstateId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("Agent");
+
+                    b.Navigation("RealEstate");
+                });
+
             modelBuilder.Entity("Hana.Models.DataModels.District", b =>
                 {
                     b.HasOne("Hana.Models.DataModels.City", "City")
@@ -657,6 +705,8 @@ namespace Hana.Migrations
 
             modelBuilder.Entity("Hana.Models.DataModels.RealEstate", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("Map")
                         .IsRequired();
 

@@ -17,9 +17,11 @@ namespace Hana.Areas.AdminArea.Controllers
     public class AgentController : Controller
     {
         private readonly IAgentServices _services;
-        public AgentController(IAgentServices services)
+        private readonly IRealEstateServices _realEstateServices;
+        public AgentController(IAgentServices services, IRealEstateServices realEstateServices)
         {
             _services = services;
+            _realEstateServices = realEstateServices;
         }
 
         [Authorize(Roles = "Admin")]
@@ -61,22 +63,27 @@ namespace Hana.Areas.AdminArea.Controllers
         [NoDirectAccess]
         public async Task<IActionResult> ChangeRoleLV(int id)
         {
-            var agent = await _services.GetDetails(id);
-
-            if (agent == null)
+            var agents = await _services.GetListAgent();
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                var agent = await _services.GetDetails(id);
+
+                if (agent == null)
+                {
+                    return NotFound();
+                }
+
+                var levels = await _services.GetLevelList();
+                ViewData["Levels"] = new SelectList(levels, "Id", "LevelName", agent.LevelId);
+
+                var vmAgent = new VM_Agent
+                {
+                    Id = agent.Id,
+                };
+
+                return View(vmAgent);
             }
-
-            var levels = await _services.GetLevelList();
-            ViewData["Levels"] = new SelectList(levels, "Id", "LevelName", agent.LevelId);
-
-            var vmAgent = new VM_Agent
-            {
-                Id = agent.Id,
-            };
-
-            return View(vmAgent);
+            return View(agents);
         }
 
         [HttpPost]
@@ -187,6 +194,13 @@ namespace Hana.Areas.AdminArea.Controllers
         {
             var isSuccess = await _services.Delete(id);
             return Json(new { isSuccess, html = Helper.RenderRazorViewToString(this, "_ViewAllAgents", await _services.GetListAgent()) });
+        }
+
+        [HttpGet]
+        public IActionResult MonthlyPostingsChart()
+        {
+            var monthlyDataFromDb = _realEstateServices.GetMonthlyPostingsData();
+            return Json(monthlyDataFromDb);
         }
     }
 }

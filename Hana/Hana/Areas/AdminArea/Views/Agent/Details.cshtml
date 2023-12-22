@@ -1,5 +1,7 @@
 ﻿@model Hana.Models.ViewModels.VM_Agent;
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row m-b-lg m-t-lg">
         <div class="col-md-3">
@@ -14,7 +16,7 @@
                         </h2>
                         <h4><span><i class="fa fa-info mr-2"></i></span> @Model.Name</h4>
                         <p>
-                            @Model.ActivePosts/@Model.TotalPosts property active
+                            @Model.ActivePosts/@Model.TotalPosts bài đăng đang mở
                         </p>
                     </div>
                 </div>
@@ -52,110 +54,149 @@
                             </form>
                         }
                     </tr>
-                    <tr>
-                        <td style="border:none !important">
-                            Phone confirm
-                        </td>
-                        <td style="border:none !important">
-                            <strong>@Model.IsConfirmedNumber</strong>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="ibox">
-                @if (Model.Posts.Count > 0)
-                {
-                    <div class="ibox-title">
-                        <h5>Tất cả bài đăng</h5>
-                    </div>
-                    <div class="ibox-content">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link text-info active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Danh sách bài đăng</a>
+            <a class="nav-item nav-link text-info" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Thống kê</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ibox">
+                        @if (Model.Posts.Count > 0)
+                        {
+                            <div class="ibox-title">
+                                <h5>Tất cả bài đăng</h5>
+                            </div>
+                            <div class="ibox-content">
 
-                        <div class="project-list">
+                                <div class="project-list">
 
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Trạng thái</th>
-                                        <th>Tiêu đề</th>
-                                        <th>Giá</th>
-                                        <th>Địa chỉ</th>
-                                        <th class="text-center">Hành động</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in Model.Posts)
-                                    {
-                                        <tr>
-                                            @{
-                                                var status = string.Empty;
-                                                var statusClass = string.Empty;
-                                                if (item.IsActive)
-                                                {
-                                                    status = item.ExprireTime > DateTime.Now ? "Sẵn sàng" : "Hết hạn";
-                                                    statusClass = item.ExprireTime > DateTime.Now ? "label-primary" : "label-warning";
-                                                }
-                                                else
-                                                {
-                                                    status = "Đã thuê";
-                                                    statusClass = "label-default";
-                                                }
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Trạng thái</th>
+                                                <th>Tiêu đề</th>
+                                                <th>Giá</th>
+                                                <th>Địa chỉ</th>
+                                                <th class="text-center">Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Posts)
+                                            {
+                                                <tr>
+                                                    @{
+                                                        var status = string.Empty;
+                                                        var statusClass = string.Empty;
+                                                        if (item.IsActive == true)
+                                                        {
+                                                            status = item.ExprireTime > DateTime.Now ? "Sẵn sàng" : "Hết hạn";
+                                                            statusClass = item.ExprireTime > DateTime.Now ? "label-primary" : "label-warning";
+                                                        }
+                                                        else
+                                                        {
+                                                            status = "Đã thuê";
+                                                            statusClass = "label-default";
+                                                        }
+                                                    }
+                                                    <td class="project-status">
+                                                        <span class="label @statusClass">@status</span>
+                                                    </td>
+                                                    <td class="project-title">
+                                                        <a href="project_detail.html">@item.RealEstateDetail.Title</a>
+                                                        <br />
+                                                        <small>Created @item.PostTime.ToString("dd/MM/yyyy")</small>
+                                                    </td>
+                                                    <td class="project-completion">
+                                                        @string.Format("{0:C}", item.RealEstateDetail.Price)
+
+                                                    </td>
+                                                    <td class="project-title">
+                                                        @item.Map.Address
+                                                    </td>
+
+                                                    <td class="project-actions text-center">
+                                                        <a asp-area="AdminArea"
+                                                           asp-controller="RealEstate"
+                                                           asp-action="Details"
+                                                           asp-route-id="@item.Id"
+                                                           class="btn btn-info btn-sm">
+                                                            <i class="fa fa-folder"></i> View
+                                                        </a>
+                                                        <a asp-area="AdminArea"
+                                                           asp-controller="RealEstate"
+                                                           asp-action="Edit"
+                                                           asp-route-id="@item.Id"
+                                                           class="btn btn-warning btn-sm">
+                                                            <i class="fas fa-pencil-alt"></i> Edit
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                             }
-                                            <td class="project-status">
-                                                <span class="label @statusClass">@status</span>
-                                            </td>
-                                            <td class="project-title">
-                                                <a href="project_detail.html">@item.RealEstateDetail.Title</a>
-                                                <br />
-                                                <small>Created @item.PostTime.ToString("dd/MM/yyyy")</small>
-                                            </td>
-                                            <td class="project-completion">
-                                                @string.Format("{0:C}", item.RealEstateDetail.Price)
 
-                                            </td>
-                                            <td class="project-title">
-                                                @item.Map.Address
-                                            </td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="ibox-title">
 
-                                            <td class="project-actions text-center">
-                                                <a asp-area="AdminArea"
-                                                   asp-controller="RealEstate"
-                                                   asp-action="Details"
-                                                   asp-route-id="@item.Id"
-                                                   class="btn btn-info btn-sm">
-                                                    <i class="fa fa-folder"></i> View
-                                                </a>
-                                                <a asp-area="AdminArea"
-                                                   asp-controller="RealEstate"
-                                                   asp-action="Edit"
-                                                   asp-route-id="@item.Id"
-                                                   class="btn btn-warning btn-sm">
-                                                    <i class="fas fa-pencil-alt"></i> Edit
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    }
+                                <h5>Chưa có bài đăng nào</h5>
+                            </div>
+                        }
 
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
-                }
-                else
-                {
-                    <div class="ibox-title">
-
-                        <h5>Chưa có bài đăng nào</h5>
-                    </div>
-                }
-
+                </div>
             </div>
         </div>
+
+        @* ------------------- *@
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <canvas id="monthlyPostingsChart" width="600" height="200"></canvas>
+        </div>
+       
     </div>
-
-
 </div>
+<script>
+    fetch('/AdminArea/Agent/MonthlyPostingsChart')
+        .then(response => response.json())
+        .then(data => {
+            const months = data.map(entry => entry.month);
+
+            const postings = data.map(entry => entry.postCount);
+
+            const ctx = document.getElementById('monthlyPostingsChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Số lượng bài đăng',
+                        data: postings,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+</script>

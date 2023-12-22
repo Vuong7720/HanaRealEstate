@@ -1,0 +1,21 @@
+﻿@* @model IEnumerable<Hana.Models.MonthlyPostStats>;
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tháng</th>
+            <th>Số lượng bài đăng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var stat in Model)
+        {
+            <tr>
+                <td>@stat.Month</td>
+                <td>@stat.PostCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
